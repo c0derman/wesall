@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'BahijGretaArabic';
+    src: url('BahijGretaArabic-Regular.woff2') format('woff2'),
+        url('BahijGretaArabic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VIPHakmBold-VIPHakm';
+    src: url('VIPHakmBold-VIPHakm.woff2') format('woff2'),
+        url('VIPHakmBold-VIPHakm.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alsalilbold';
+    src: url('GESSTwoBold-Bold.woff2') format('woff2'),
+        url('GESSTwoBold-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+

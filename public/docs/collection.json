@@ -1,0 +1,1948 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "https:\/\/app.wesal.plus"
+        }
+    ],
+    "info": {
+        "name": "wesal",
+        "_postman_id": "2516b420-9d31-4fdb-bcaa-40d91f648395",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get ac master view template",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/base-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/base-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":1,\"incident\":null,\"client_models\":[],\"data\":{\"__appImmutables\":{\"auth_info\":{\"authorized\":false,\"reaction_code\":9},\"availableRoutes\":[\"liap.serverNotifications\",\"sanctum.csrf-cookie\",\"ignition.healthCheck\",\"ignition.executeSolution\",\"ignition.updateConfig\",\"__laraware.state_via_route\",\"__laraware.redirect_via_post\",\"__laraware.post_event_streamed_request\",\"base_data\",\"api.user.read.user_conversations_list\",\"api.user.read.user_single_conversation\",\"api.user.read.user_messages\",\"api.user.read.get_stickers\",\"api.user.write.caller.reject_call\",\"api.user.write.receiver.reject_call\",\"api.user.write.caller.error\",\"api.user.write.receiver.error\",\"api.user.write.receiver.call_busy\",\"api.user.read.home_page_data\",\"api.user.read.encounter_data\",\"api.user.read.random_users\",\"api.user.find_matches.read.support_data\",\"api.user.read.setting\",\"api.user.read.photos\",\"api.user.read.wizard_profile_data\",\"api.user.read.profile\",\"api.user.read.profile_update_data\",\"api.user.credit_wallet.read.wallet_transaction_list\",\"api.user.credit_wallet.read.wallet_info\",\"api.user.credit_wallet.read.wallet_data\",\"api.user.read.premium_plan_data\",\"api.user.read.who_liked_me_users\",\"api.user.read.mutual_like_users\",\"api.user.read.my_liked_users\",\"api.user.read.my_disliked_users\",\"api.user.read.profile_visitors_users\",\"api.user.read.block_user_list\",\"api.user.read.booster_data\",\"api.user.featured_user.read.support_data\",\"api.user.notification.read.list\",\"api.user.notification.read.data\",\"locale.change\",\"user.read.contact\",\"user.contact.process\",\"page.preview\",\"landing_page\",\"search_matches\",\"user.login\",\"user.login.process\",\"user.sign_up\",\"user.sign_up.process\",\"user.forgot_password\",\"user.forgot_password.process\",\"user.reset_password\",\"user.reset_password.process\",\"user.account.activation\",\"login.with.otp\",\"send.otp\",\"verify.otp\",\"verify.otp.process\",\"social.user.login\",\"social.user.login.callback\",\"site_theme.change\",\"home_page\",\"user.profile_view\",\"user.get_profile_data\",\"user.photos_setting\",\"update.log\",\"user.read.find_matches\",\"user.update_profile.wizard\",\"user.profile.wizard_completed\",\"user.profile.finish_wizard\",\"user.logout\",\"user.change_password\",\"user.change_password.process\",\"user.change_email\",\"user.change_email.process\",\"user.new_email.activation\",\"user.new_email.read.success\",\"user.write.like_dislike\",\"user.my_liked_view\",\"user.my_disliked_view\",\"user.who_liked_me_view\",\"user.mutual_like_view\",\"user.profile_visitors_view\",\"user.write.send_gift\",\"user.write.report_user\",\"user.write.block_user\",\"user.read.block_user_list\",\"user.write.unblock_user\",\"user.write.boost_profile\",\"user.read.booster_data\",\"user.write.delete_account\",\"user.read.setting\",\"user.write.setting\",\"user.write.basic_setting\",\"user.write.update_profile_wizard\",\"user.read.search_static_cities\",\"user.write.store_city\",\"user.write.location_data\",\"user.upload_profile_image\",\"user.upload_cover_image\",\"user.write.profile_setting\",\"user.upload_photos\",\"user.upload_photos.write.delete\",\"user.read.messenger\",\"user.read.all_conversation\",\"user.read.individual_conversation\",\"user.read.user_conversation\",\"user.write.send_message\",\"user.update.user_conversation\",\"user.write.accept_decline_message_request\",\"user.write.delete_message\",\"user.write.caller.call_initialize\",\"user.write.receiver.join_call\",\"user.write.caller.reject_call\",\"user.write.receiver.reject_call\",\"user.write.caller.error\",\"user.write.receiver.error\",\"user.write.receiver.call_accept\",\"user.write.receiver.call_busy\",\"user.write.delete_all_messages\",\"user.read.get_stickers\",\"user.write.buy_stickers\",\"user.notification.read.view\",\"user.notification.read.list\",\"user.notification.write.read_all_notification\",\"user.read.encounter.view\",\"user.write.encounter.like_dislike\",\"user.write.encounter.skip_user\",\"user.premium_plan.read.view\",\"user.premium_plan.write.buy_premium_plan\",\"user.premium_plan.read.success_view\",\"user.credit_wallet.read.view\",\"user.wallet.transactions.read.view\",\"user.credit_wallet.read.wallet_transaction_list\",\"user.credit_wallet.write.paypal_transaction_complete\",\"paypal.order.process\",\"capture.paypal.checkout\",\"user.credit_wallet.write.payment_process\",\"user.credit_wallet.write.stripe.callback_url\",\"user.credit_wallet.write.stripe.cancel_url\",\"user.credit_wallet.write.razorpay.checkout\",\"user.credit_wallet.write.coingate.checkout\",\"user.credit_wallet.coingate.success\",\"crypto.payment_process\",\"verify.paystack.payment\",\"callback.paystack.payment\",\"manage.user.view_list\",\"manage.user.photos_list\",\"manage.user.read.photos_list\",\"manage.user.write.photo_delete\",\"manage.user.read.list\",\"manage.user.add\",\"manage.user.write.create\",\"manage.user.edit\",\"manage.user.write.update\",\"manage.user.write.soft_delete\",\"manage.user.write.permanent_delete\",\"manage.user.write.restore_user\",\"manage.user.write.block_user\",\"manage.user.write.unblock_user\",\"manage.user.read.details\",\"manage.user.write.verify\",\"manage.user.read.transaction_list\",\"manage.user.write.allocate_credits\",\"admin.login.fake.user_profile\",\"manage.credit_package.read.list\",\"manage.credit_package.add.view\",\"manage.credit_package.write.add\",\"manage.credit_package.edit.view\",\"manage.credit_package.write.edit\",\"manage.credit_package.write.delete\",\"manage.fake_users.read.generator_options\",\"manage.fake_users.write.create\",\"manage.fake_users.read.messenger\",\"manage.fake_users.list\",\"fake_user.write.send_message\",\"user.read.fake_user_conversation\",\"fake_user.write.accept_decline_message_request\",\"fake_user.write.like_dislike\",\"admin.write.delete_message\",\"admin.user.write.delete_all_messages\",\"media.upload_temp_media\",\"media.gift.upload_temp_media\",\"media.sticker.upload_temp_media\",\"media.package.upload_temp_media\",\"media.upload_logo\",\"media.upload_small_logo\",\"media.upload_favicon\",\"manage.dashboard\",\"addEdit.item.read.update.data\",\"field.write.delete\",\"manage.configuration.product_registration\",\"installation.version.create.registration\",\"installation.version.create.remove_registration\",\"manage.configuration.clear_cache\",\"manage.configuration.mobile_app\",\"manage.configuration.read\",\"manage.configuration.write\",\"manage.custom_fields.write\",\"add.new.section\",\"manage.help.read\",\"manage.financial_transaction.read.view_list\",\"manage.financial_transaction.read.list\",\"manage.financial_transaction.write.delete.all_transaction\",\"manage.page.view\",\"manage.page.list\",\"manage.page.add.view\",\"manage.page.write.add\",\"manage.page.edit.view\",\"manage.page.write.edit\",\"manage.page.write.delete\",\"manage.item.gift.view\",\"manage.item.gift.add.view\",\"manage.item.gift.write.add\",\"manage.item.gift.edit.view\",\"manage.item.gift.write.edit\",\"manage.item.gift.write.delete\",\"manage.item.sticker.view\",\"manage.item.sticker.write.upload_image\",\"manage.item.sticker.add.view\",\"manage.item.sticker.write.add\",\"manage.item.sticker.edit.view\",\"manage.item.sticker.write.edit\",\"manage.item.sticker.write.delete\",\"manage.abuse_report.read.list\",\"manage.abuse_report.write.moderated\",\"abuse_report.get.count\",\"manage.translations.languages\",\"manage.translations.write.language_create\",\"manage.translations.write.language_update\",\"manage.translations.write.language_delete\",\"manage.translations.lists\",\"manage.translations.scan\",\"manage.translations.update\",\"manage.translations.export\",\"manage.translations.import\",\"manage.translations.auto_translate\",\"manage.translations.auto_translate_all\",\"user.credit_wallet.write.coingate.callback_url\",\"stripe-webhook\",\"razorpay-webhook\",\"crypto-webhook\",\"paystack-webhook\"],\"routes\":{\"liap.serverNotifications\":\"in-app-purchase\\\/liap\\\/notifications\",\"sanctum.csrf-cookie\":\"sanctum\\\/csrf-cookie\",\"ignition.healthCheck\":\"_ignition\\\/health-check\",\"ignition.executeSolution\":\"_ignition\\\/execute-solution\",\"ignition.updateConfig\":\"_ignition\\\/update-config\",\"__laraware.state_via_route\":\"state-via-route\\\/{stateRouteInfo}\",\"__laraware.redirect_via_post\":\"redirect-via-post\\\/{redirectPostData}\",\"__laraware.post_event_streamed_request\":\"post-event-streamed-request\",\"base_data\":\"api\\\/base-data\",\"api.user.read.user_conversations_list\":\"api\\\/messenger\\\/get-user-conversations\",\"api.user.read.user_single_conversation\":\"api\\\/messenger\\\/{specificUserId}\\\/single-conversation\",\"api.user.read.user_messages\":\"api\\\/messenger\\\/{userId}\\\/get-user-messages\",\"api.user.read.get_stickers\":\"api\\\/messenger\\\/fetch-stickers\",\"api.user.write.caller.reject_call\":\"api\\\/messenger\\\/{receiverUserUid}\\\/caller-reject-call\",\"api.user.write.receiver.reject_call\":\"api\\\/messenger\\\/{callerUserUid}\\\/receiver-reject-call\",\"api.user.write.caller.error\":\"api\\\/messenger\\\/{receiverUserUid}\\\/caller-errors\",\"api.user.write.receiver.error\":\"api\\\/messenger\\\/{callerUserUid}\\\/receiver-errors\",\"api.user.write.receiver.call_busy\":\"api\\\/messenger\\\/{callerUserUid}\\\/receiver-busy-call\",\"api.user.read.home_page_data\":\"api\\\/home\",\"api.user.read.encounter_data\":\"api\\\/encounter-data\",\"api.user.read.random_users\":\"api\\\/random-user\",\"api.user.find_matches.read.support_data\":\"api\\\/find-matches-data\",\"api.user.read.setting\":\"api\\\/{pageType}\\\/get-setting-data\",\"api.user.read.photos\":\"api\\\/uploaded-photos\",\"api.user.read.wizard_profile_data\":\"api\\\/profile\\\/read-profile-details\",\"api.user.read.profile\":\"api\\\/profile\\\/{username}\\\/read-profile-details\",\"api.user.read.profile_update_data\":\"api\\\/profile\\\/prepare-profile-update\",\"api.user.credit_wallet.read.wallet_transaction_list\":\"api\\\/credit-wallet\\\/transaction-list\",\"api.user.credit_wallet.read.wallet_info\":\"api\\\/credit-wallet\\\/wallet-info-data\",\"api.user.credit_wallet.read.wallet_data\":\"api\\\/credit-wallet\\\/credit-wallet-data\",\"api.user.read.premium_plan_data\":\"api\\\/premium-plan\\\/premium-plan-data\",\"api.user.read.who_liked_me_users\":\"api\\\/who-liked-me\",\"api.user.read.mutual_like_users\":\"api\\\/mutual-likes\",\"api.user.read.my_liked_users\":\"api\\\/my-likes\",\"api.user.read.my_disliked_users\":\"api\\\/disliked\",\"api.user.read.profile_visitors_users\":\"api\\\/visitors\",\"api.user.read.block_user_list\":\"api\\\/blocked-users-list\",\"api.user.read.booster_data\":\"api\\\/get-booster-info\",\"api.user.featured_user.read.support_data\":\"api\\\/get-featured-user-data\",\"api.user.notification.read.list\":\"api\\\/notifications\\\/notification-list\",\"api.user.notification.read.data\":\"api\\\/notifications\\\/notification-data\",\"locale.change\":\"change-language\\\/{localeID}\",\"user.read.contact\":\"contact\",\"user.contact.process\":\"post-contact\",\"page.preview\":\"page\\\/{pageUId}\\\/{title}\",\"landing_page\":\"\\\/\",\"search_matches\":\"search-matches\",\"user.login\":\"user\\\/login\",\"user.login.process\":\"user\\\/login-process\",\"user.sign_up\":\"user\\\/sign-up\",\"user.sign_up.process\":\"user\\\/sign-up-process\",\"user.forgot_password\":\"user\\\/forgot-password\",\"user.forgot_password.process\":\"user\\\/forgot-password-process\",\"user.reset_password\":\"user\\\/reset-password\",\"user.reset_password.process\":\"user\\\/reset-password-process\\\/{reminderToken}\",\"user.account.activation\":\"user\\\/{userUid}\\\/account-activation\",\"login.with.otp\":\"user\\\/login-with-otp\",\"send.otp\":\"user\\\/send-otp\",\"verify.otp\":\"user\\\/verify-otp\",\"verify.otp.process\":\"user\\\/verify-otp-process\",\"social.user.login\":\"user\\\/social-login\\\/request\\\/{provider}\",\"social.user.login.callback\":\"user\\\/social-login\\\/response\\\/{provider}\",\"site_theme.change\":\"change-theme\\\/{themeName}\",\"home_page\":\"home\",\"user.profile_view\":\"@{username}\",\"user.get_profile_data\":\"{username}\\\/get-user-profile-data\",\"user.photos_setting\":\"@{username}\\\/photos\",\"update.log\":\"update-log\",\"user.read.find_matches\":\"find-matches\",\"user.update_profile.wizard\":\"user\\\/update-profile-wizard\",\"user.profile.wizard_completed\":\"user\\\/check-profile-updated\",\"user.profile.finish_wizard\":\"user\\\/finish-wizard\",\"user.logout\":\"user\\\/logout\",\"user.change_password\":\"user\\\/change-password\",\"user.change_password.process\":\"user\\\/change-password-process\",\"user.change_email\":\"user\\\/change-email\",\"user.change_email.process\":\"user\\\/change-email-process\",\"user.new_email.activation\":\"user\\\/{userUid}\\\/{newEmail}\\\/new-email-activation\",\"user.new_email.read.success\":\"user\\\/update-email-success\",\"user.write.like_dislike\":\"user\\\/{toUserUid}\\\/{like}\\\/user-like-dislike\",\"user.my_liked_view\":\"user\\\/liked\",\"user.my_disliked_view\":\"user\\\/disliked\",\"user.who_liked_me_view\":\"user\\\/who-liked-me\",\"user.mutual_like_view\":\"user\\\/mutual-likes\",\"user.profile_visitors_view\":\"user\\\/visitors\",\"user.write.send_gift\":\"user\\\/{sendUserUId}\\\/send-gift\",\"user.write.report_user\":\"user\\\/{sendUserUId}\\\/report-user\",\"user.write.block_user\":\"user\\\/block-user\",\"user.read.block_user_list\":\"user\\\/blocked-users\",\"user.write.unblock_user\":\"user\\\/{userUid}\\\/unblock-user\",\"user.write.boost_profile\":\"user\\\/boost-profile\",\"user.read.booster_data\":\"user\\\/get-booster-info\",\"user.write.delete_account\":\"user\\\/delete-account\",\"user.read.setting\":\"user\\\/settings\\\/{pageType}\",\"user.write.setting\":\"user\\\/settings\\\/{pageType}\\\/process-user-setting-store\",\"user.write.basic_setting\":\"user\\\/settings\\\/process-basic-settings\",\"user.write.update_profile_wizard\":\"user\\\/settings\\\/process-update-profile-wizard\",\"user.read.search_static_cities\":\"user\\\/settings\\\/search-static-cities\",\"user.write.store_city\":\"user\\\/settings\\\/store-city\",\"user.write.location_data\":\"user\\\/settings\\\/process-location-data\",\"user.upload_profile_image\":\"user\\\/settings\\\/upload-profile-image\",\"user.upload_cover_image\":\"user\\\/settings\\\/upload-cover-image\",\"user.write.profile_setting\":\"user\\\/settings\\\/process-profile-setting\",\"user.upload_photos\":\"user\\\/settings\\\/upload-photos\",\"user.upload_photos.write.delete\":\"user\\\/settings\\\/{photoUid}\\\/delete-photos\",\"user.read.messenger\":\"user\\\/messenger\",\"user.read.all_conversation\":\"user\\\/messenger\\\/all-conversation\",\"user.read.individual_conversation\":\"user\\\/messenger\\\/{specificUserId}\\\/individual-conversation\",\"user.read.user_conversation\":\"user\\\/messenger\\\/{userId}\\\/get-user-conversation\",\"user.write.send_message\":\"user\\\/messenger\\\/{userId}\\\/process-send-message\",\"user.update.user_conversation\":\"user\\\/messenger\\\/{userId}\\\/update-user-conversation\",\"user.write.accept_decline_message_request\":\"user\\\/messenger\\\/{userId}\\\/process-accept-decline-message-request\",\"user.write.delete_message\":\"user\\\/messenger\\\/{chatId}\\\/{userId}\\\/delete-message\",\"user.write.caller.call_initialize\":\"user\\\/messenger\\\/{userUId}\\\/{type}\\\/call-initialize\",\"user.write.receiver.join_call\":\"user\\\/messenger\\\/join-call\",\"user.write.caller.reject_call\":\"user\\\/messenger\\\/{receiverUserUid}\\\/caller-reject-call\",\"user.write.receiver.reject_call\":\"user\\\/messenger\\\/{callerUserUid}\\\/receiver-reject-call\",\"user.write.caller.error\":\"user\\\/messenger\\\/{receiverUserUid}\\\/caller-errors\",\"user.write.receiver.error\":\"user\\\/messenger\\\/{callerUserUid}\\\/receiver-errors\",\"user.write.receiver.call_accept\":\"user\\\/messenger\\\/{receiverUserUid}\\\/receiver-call-accept\",\"user.write.receiver.call_busy\":\"user\\\/messenger\\\/{callerUserUid}\\\/receiver-busy-call\",\"user.write.delete_all_messages\":\"user\\\/messenger\\\/{userId}\\\/delete-all-message\",\"user.read.get_stickers\":\"user\\\/messenger\\\/get-stickers\",\"user.write.buy_stickers\":\"user\\\/messenger\\\/process-buy-sticker\",\"user.notification.read.view\":\"user\\\/notifications\",\"user.notification.read.list\":\"user\\\/notifications\\\/notification-list\",\"user.notification.write.read_all_notification\":\"user\\\/notifications\\\/read-all-notification\",\"user.read.encounter.view\":\"user\\\/encounters\",\"user.write.encounter.like_dislike\":\"user\\\/encounters\\\/{toUserUid}\\\/{like}\\\/user-encounter-like-dislike\",\"user.write.encounter.skip_user\":\"user\\\/encounters\\\/{toUserUid}\\\/skip-encounter-user\",\"user.premium_plan.read.view\":\"user\\\/premium\",\"user.premium_plan.write.buy_premium_plan\":\"user\\\/premium\\\/buy-plans\",\"user.premium_plan.read.success_view\":\"user\\\/premium\\\/success\",\"user.credit_wallet.read.view\":\"user\\\/credits\",\"user.wallet.transactions.read.view\":\"user\\\/credits\\\/transactions\",\"user.credit_wallet.read.wallet_transaction_list\":\"user\\\/credits\\\/user-wallet-transaction-list\",\"user.credit_wallet.write.paypal_transaction_complete\":\"user\\\/credits\\\/{packageUid}\\\/paypal-transaction-complete\",\"paypal.order.process\":\"user\\\/credits\\\/paypal-order-submit\",\"capture.paypal.checkout\":\"user\\\/credits\\\/paypal\\\/capture-paypal-order\",\"user.credit_wallet.write.payment_process\":\"user\\\/credits\\\/payment-process\",\"user.credit_wallet.write.stripe.callback_url\":\"user\\\/credits\\\/stripe-callback\",\"user.credit_wallet.write.stripe.cancel_url\":\"user\\\/credits\\\/stripe-cancel\",\"user.credit_wallet.write.razorpay.checkout\":\"user\\\/credits\\\/razorpay-checkout\",\"user.credit_wallet.write.coingate.checkout\":\"user\\\/credits\\\/coingate-checkout\",\"user.credit_wallet.coingate.success\":\"user\\\/credits\\\/coingate-success-url\\\/{status}\",\"crypto.payment_process\":\"user\\\/credits\\\/crypto-checkout\",\"verify.paystack.payment\":\"user\\\/credits\\\/paystack-verify\\\/{reference}\",\"callback.paystack.payment\":\"user\\\/credits\\\/paystack-callback-url\",\"manage.user.view_list\":\"admin\\\/manage\\\/user\\\/{status}\\\/list\\\/{userType?}\",\"manage.user.photos_list\":\"admin\\\/manage\\\/user\\\/photos\",\"manage.user.read.photos_list\":\"admin\\\/manage\\\/user\\\/photos-list\",\"manage.user.write.photo_delete\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/{type}\\\/{profileOrPhotoUid}\\\/process-delete-photo\",\"manage.user.read.list\":\"admin\\\/manage\\\/user\\\/{status}\\\/users-list\\\/{userType?}\",\"manage.user.add\":\"admin\\\/manage\\\/user\\\/add\",\"manage.user.write.create\":\"admin\\\/manage\\\/user\\\/process-add\",\"manage.user.edit\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/edit\",\"manage.user.write.update\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-update\",\"manage.user.write.soft_delete\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-soft-delete\",\"manage.user.write.permanent_delete\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-permanent-delete\",\"manage.user.write.restore_user\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-restore-user\",\"manage.user.write.block_user\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-block-user\",\"manage.user.write.unblock_user\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/process-unblock-user\",\"manage.user.read.details\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/details\",\"manage.user.write.verify\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/verify-profile\",\"manage.user.read.transaction_list\":\"admin\\\/manage\\\/user\\\/{userUid}\\\/manage-user-transaction-list\",\"manage.user.write.allocate_credits\":\"admin\\\/manage\\\/user\\\/add-user-allocate-credits\",\"admin.login.fake.user_profile\":\"admin\\\/manage\\\/user\\\/process-to-login\\\/{userId}\",\"manage.credit_package.read.list\":\"admin\\\/manage\\\/credit-package\\\/list\",\"manage.credit_package.add.view\":\"admin\\\/manage\\\/credit-package\\\/add-package\",\"manage.credit_package.write.add\":\"admin\\\/manage\\\/credit-package\\\/add-package-process\",\"manage.credit_package.edit.view\":\"admin\\\/manage\\\/credit-package\\\/{packageUId}\\\/edit-package\",\"manage.credit_package.write.edit\":\"admin\\\/manage\\\/credit-package\\\/{packageUId}\\\/edit-package-process\",\"manage.credit_package.write.delete\":\"admin\\\/manage\\\/credit-package\\\/{packageUId}\\\/delete-package\",\"manage.fake_users.read.generator_options\":\"admin\\\/manage\\\/fake-user\\\/generate\",\"manage.fake_users.write.create\":\"admin\\\/manage\\\/fake-user\\\/generate-fake-users\",\"manage.fake_users.read.messenger\":\"admin\\\/manage\\\/fake-user\\\/conversations\",\"manage.fake_users.list\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/fake-user-list\\\/{fakeUserId}\",\"fake_user.write.send_message\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{userId}\\\/process-send-message\",\"user.read.fake_user_conversation\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{userId}\\\/{fake_user_id}\\\/get-fake-user-conversation\",\"fake_user.write.accept_decline_message_request\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{userId}\\\/{optionalLoggedInUserId}\\\/process-accept-decline-message-request\",\"fake_user.write.like_dislike\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{fromUserId}\\\/{toUserUid}\\\/{like}\\\/user-like-dislike\",\"admin.write.delete_message\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{chatId}\\\/{userId}\\\/{optionalLoggedInUserId}\\\/delete-message\",\"admin.user.write.delete_all_messages\":\"admin\\\/manage\\\/fake-user\\\/conversations\\\/{userId}\\\/{optionalLoggedInUserId}\\\/delete-all-message\",\"media.upload_temp_media\":\"admin\\\/media\\\/upload-temp-media\",\"media.gift.upload_temp_media\":\"admin\\\/media\\\/upload-gift-temp-media\",\"media.sticker.upload_temp_media\":\"admin\\\/media\\\/upload-sticker-temp-media\",\"media.package.upload_temp_media\":\"admin\\\/media\\\/upload-package-temp-media\",\"media.upload_logo\":\"admin\\\/media\\\/upload-logo\",\"media.upload_small_logo\":\"admin\\\/media\\\/upload-small-logo\",\"media.upload_favicon\":\"admin\\\/media\\\/upload-favicon\",\"manage.dashboard\":\"admin\",\"addEdit.item.read.update.data\":\"admin\\\/configuration\\\/get-items-info\\\/{groupName}\\\/{itemPos}\",\"field.write.delete\":\"admin\\\/configuration\\\/process-custom-fields-delete\\\/{groupName}\\\/{itemPos}\\\/{field}\",\"manage.configuration.product_registration\":\"admin\\\/configuration\\\/licence-information\",\"installation.version.create.registration\":\"admin\\\/configuration\\\/licence-information-process\",\"installation.version.create.remove_registration\":\"admin\\\/configuration\\\/licence-information-remove-process\",\"manage.configuration.clear_cache\":\"admin\\\/configuration\\\/clear-system-cache\",\"manage.configuration.mobile_app\":\"admin\\\/configuration\\\/mobile-app\",\"manage.configuration.read\":\"admin\\\/configuration\\\/{pageType}\",\"manage.configuration.write\":\"admin\\\/configuration\\\/{pageType}\\\/process-configuration-store\",\"manage.custom_fields.write\":\"admin\\\/configuration\\\/{pageType}\\\/process-custom-fields-store\",\"add.new.section\":\"admin\\\/configuration\\\/{pageType}\\\/add-new-section\",\"manage.help.read\":\"admin\\\/help-references\\\/emails\",\"manage.financial_transaction.read.view_list\":\"admin\\\/financial-transaction\\\/{transactionType}\\\/list\",\"manage.financial_transaction.read.list\":\"admin\\\/financial-transaction\\\/{transactionType}\\\/transaction-list\",\"manage.financial_transaction.write.delete.all_transaction\":\"admin\\\/financial-transaction\\\/delete-all-test-transaction\",\"manage.page.view\":\"admin\\\/pages\",\"manage.page.list\":\"admin\\\/pages\\\/list\",\"manage.page.add.view\":\"admin\\\/pages\\\/add\",\"manage.page.write.add\":\"admin\\\/pages\\\/page-add-process\",\"manage.page.edit.view\":\"admin\\\/pages\\\/{pageUId}\\\/edit\",\"manage.page.write.edit\":\"admin\\\/pages\\\/{pageUId}\\\/page-edit-process\",\"manage.page.write.delete\":\"admin\\\/pages\\\/{pageUId}\\\/page-delete\",\"manage.item.gift.view\":\"admin\\\/gift\",\"manage.item.gift.add.view\":\"admin\\\/add-gift\",\"manage.item.gift.write.add\":\"admin\\\/add-gift-process\",\"manage.item.gift.edit.view\":\"admin\\\/{giftUId}\\\/edit-gift\",\"manage.item.gift.write.edit\":\"admin\\\/{giftUId}\\\/edit-gift-process\",\"manage.item.gift.write.delete\":\"admin\\\/{giftUId}\\\/delete-gift\",\"manage.item.sticker.view\":\"admin\\\/sticker\",\"manage.item.sticker.write.upload_image\":\"admin\\\/upload-sticker-image\",\"manage.item.sticker.add.view\":\"admin\\\/add-sticker\",\"manage.item.sticker.write.add\":\"admin\\\/add-sticker-process\",\"manage.item.sticker.edit.view\":\"admin\\\/{stickerUId}\\\/edit-sticker\",\"manage.item.sticker.write.edit\":\"admin\\\/{stickerUId}\\\/edit-sticker-process\",\"manage.item.sticker.write.delete\":\"admin\\\/{stickerUId}\\\/delete-sticker\",\"manage.abuse_report.read.list\":\"admin\\\/abuse-report\\\/{status}\\\/list\",\"manage.abuse_report.write.moderated\":\"admin\\\/abuse-report\\\/moderate-report\",\"abuse_report.get.count\":\"admin\\\/abuse-report\\\/abuse-report-count\",\"manage.translations.languages\":\"admin\\\/translations\",\"manage.translations.write.language_create\":\"admin\\\/translations\\\/process-language-store\",\"manage.translations.write.language_update\":\"admin\\\/translations\\\/process-language-update\",\"manage.translations.write.language_delete\":\"admin\\\/translations\\\/{languageId}\\\/process-language-delete\",\"manage.translations.lists\":\"admin\\\/translations\\\/language\\\/{languageId}\\\/{languageType?}\",\"manage.translations.scan\":\"admin\\\/translations\\\/scan\\\/{languageId}\\\/{preventReload?}\",\"manage.translations.update\":\"admin\\\/translations\\\/update\\\/{languageType?}\",\"manage.translations.export\":\"admin\\\/translations\\\/export\\\/{languageId}\",\"manage.translations.import\":\"admin\\\/translations\\\/import\\\/{languageId}\",\"manage.translations.auto_translate\":\"admin\\\/translations\\\/auto-translate\\\/{serviceId}\\\/{languageId}\",\"manage.translations.auto_translate_all\":\"admin\\\/translations\\\/auto-translate-all\\\/{serviceId}\",\"user.credit_wallet.write.coingate.callback_url\":\"coingate-callback\",\"stripe-webhook\":\"stripe\\\/order-payment-webhook\",\"razorpay-webhook\":\"razorpay\\\/order-payment-razorpay-webhook\",\"crypto-webhook\":\"crypto\\\/crypto-order-payment-webhook\",\"paystack-webhook\":\"paystack-webhook-order\"},\"agora_app_id\":\"\",\"pusher_key\":\"\",\"pusher_cluster_key\":\"ap2\",\"messages\":{\"validation\":{\"accepted\":\"The :attribute must be accepted.\",\"accepted_if\":\"The :attribute field must be accepted when :other is :value.\",\"active_url\":\"The :attribute is not a valid URL.\",\"after\":\"The :attribute must be a date after :date.\",\"after_or_equal\":\"The :attribute must be a date after or equal to :date.\",\"alpha\":\"The :attribute may only contain letters.\",\"alpha_dash\":\"The :attribute may only contain letters, numbers, dashes and underscores.\",\"alpha_num\":\"The :attribute may only contain letters and numbers.\",\"array\":\"The :attribute must be an array.\",\"ascii\":\"The :attribute field must only contain single-byte alphanumeric characters and symbols.\",\"before\":\"The :attribute must be a date before :date.\",\"before_or_equal\":\"The :attribute must be a date before or equal to :date.\",\"between\":{\"array\":\"The :attribute must have between :min and :max items.\",\"file\":\"The :attribute must be between :min and :max kilobytes.\",\"numeric\":\"The :attribute must be between :min and :max.\",\"string\":\"The :attribute must be between :min and :max characters.\"},\"boolean\":\"The :attribute field must be true or false.\",\"can\":\"The :attribute field contains an unauthorized value.\",\"confirmed\":\"The :attribute confirmation does not match.\",\"current_password\":\"The password is incorrect.\",\"date\":\"The :attribute is not a valid date.\",\"date_equals\":\"The :attribute must be a date equal to :date.\",\"date_format\":\"The :attribute does not match the format :format.\",\"decimal\":\"The :attribute field must have :decimal decimal places.\",\"declined\":\"The :attribute field must be declined.\",\"declined_if\":\"The :attribute field must be declined when :other is :value.\",\"different\":\"The :attribute and :other must be different.\",\"digits\":\"The :attribute must be :digits digits.\",\"digits_between\":\"The :attribute must be between :min and :max digits.\",\"dimensions\":\"The :attribute has invalid image dimensions.\",\"distinct\":\"The :attribute field has a duplicate value.\",\"doesnt_end_with\":\"The :attribute field must not end with one of the following: :values.\",\"doesnt_start_with\":\"The :attribute field must not start with one of the following: :values.\",\"email\":\"The :attribute must be a valid email address.\",\"ends_with\":\"The :attribute must end with one of the following: :values.\",\"enum\":\"The selected :attribute is invalid.\",\"exists\":\"The selected :attribute is invalid.\",\"extensions\":\"The :attribute field must have one of the following extensions: :values.\",\"file\":\"The :attribute must be a file.\",\"filled\":\"The :attribute field must have a value.\",\"gt\":{\"array\":\"The :attribute must have more than :value items.\",\"file\":\"The :attribute must be greater than :value kilobytes.\",\"numeric\":\"The :attribute must be greater than :value.\",\"string\":\"The :attribute must be greater than :value characters.\"},\"gte\":{\"array\":\"The :attribute must have :value items or more.\",\"file\":\"The :attribute must be greater than or equal :value kilobytes.\",\"numeric\":\"The :attribute must be greater than or equal :value.\",\"string\":\"The :attribute must be greater than or equal :value characters.\"},\"hex_color\":\"The :attribute field must be a valid hexadecimal color.\",\"image\":\"The :attribute must be an image.\",\"in\":\"The selected :attribute is invalid.\",\"in_array\":\"The :attribute field does not exist in :other.\",\"integer\":\"The :attribute must be an integer.\",\"ip\":\"The :attribute must be a valid IP address.\",\"ipv4\":\"The :attribute must be a valid IPv4 address.\",\"ipv6\":\"The :attribute must be a valid IPv6 address.\",\"json\":\"The :attribute must be a valid JSON string.\",\"lowercase\":\"The :attribute field must be lowercase.\",\"lt\":{\"array\":\"The :attribute must have less than :value items.\",\"file\":\"The :attribute must be less than :value kilobytes.\",\"numeric\":\"The :attribute must be less than :value.\",\"string\":\"The :attribute must be less than :value characters.\"},\"lte\":{\"array\":\"The :attribute must not have more than :value items.\",\"file\":\"The :attribute must be less than or equal :value kilobytes.\",\"numeric\":\"The :attribute must be less than or equal :value.\",\"string\":\"The :attribute must be less than or equal :value characters.\"},\"mac_address\":\"The :attribute field must be a valid MAC address.\",\"max\":{\"array\":\"The :attribute may not have more than :max items.\",\"file\":\"The :attribute may not be greater than :max kilobytes.\",\"numeric\":\"The :attribute may not be greater than :max.\",\"string\":\"The :attribute may not be greater than :max characters.\"},\"max_digits\":\"The :attribute field must not have more than :max digits.\",\"mimes\":\"The :attribute must be a file of type: :values.\",\"mimetypes\":\"The :attribute must be a file of type: :values.\",\"min\":{\"array\":\"The :attribute must have at least :min items.\",\"file\":\"The :attribute must be at least :min kilobytes.\",\"numeric\":\"The :attribute must be at least :min.\",\"string\":\"The :attribute must be at least :min characters.\"},\"min_digits\":\"The :attribute field must have at least :min digits.\",\"missing\":\"The :attribute field must be missing.\",\"missing_if\":\"The :attribute field must be missing when :other is :value.\",\"missing_unless\":\"The :attribute field must be missing unless :other is :value.\",\"missing_with\":\"The :attribute field must be missing when :values is present.\",\"missing_with_all\":\"The :attribute field must be missing when :values are present.\",\"multiple_of\":\"The :attribute field must be a multiple of :value.\",\"not_in\":\"The selected :attribute is invalid.\",\"not_regex\":\"The :attribute format is invalid.\",\"numeric\":\"The :attribute must be a number.\",\"password\":\"The password is incorrect.\",\"present\":\"The :attribute field must be present.\",\"present_if\":\"The :attribute field must be present when :other is :value.\",\"present_unless\":\"The :attribute field must be present unless :other is :value.\",\"present_with\":\"The :attribute field must be present when :values is present.\",\"present_with_all\":\"The :attribute field must be present when :values are present.\",\"prohibited\":\"The :attribute field is prohibited.\",\"prohibited_if\":\"The :attribute field is prohibited when :other is :value.\",\"prohibited_unless\":\"The :attribute field is prohibited unless :other is in :values.\",\"prohibits\":\"The :attribute field prohibits :other from being present.\",\"regex\":\"The :attribute format is invalid.\",\"required\":\"The :attribute field is required.\",\"required_array_keys\":\"The :attribute field must contain entries for: :values.\",\"required_if\":\"The :attribute field is required when :other is :value.\",\"required_if_accepted\":\"The :attribute field is required when :other is accepted.\",\"required_unless\":\"The :attribute field is required unless :other is in :values.\",\"required_with\":\"The :attribute field is required when :values is present.\",\"required_with_all\":\"The :attribute field is required when :values are present.\",\"required_without\":\"The :attribute field is required when :values is not present.\",\"required_without_all\":\"The :attribute field is required when none of :values are present.\",\"same\":\"The :attribute and :other must match.\",\"size\":{\"array\":\"The :attribute must contain :size items.\",\"file\":\"The :attribute must be :size kilobytes.\",\"numeric\":\"The :attribute must be :size.\",\"string\":\"The :attribute must be :size characters.\"},\"starts_with\":\"The :attribute must start with one of the following: :values.\",\"string\":\"The :attribute must be a string.\",\"timezone\":\"The :attribute must be a valid zone.\",\"unique\":\"The :attribute has already been taken.\",\"uploaded\":\"The :attribute failed to upload.\",\"uppercase\":\"The :attribute field must be uppercase.\",\"url\":\"The :attribute format is invalid.\",\"ulid\":\"The :attribute field must be a valid ULID.\",\"uuid\":\"The :attribute must be a valid UUID.\",\"custom\":{\"attribute-name\":{\"rule-name\":\"custom-message\"},\"confirmation_code\":{\"captcha\":\"The confirmation code is invalid.\"},\"email\":{\"unique_email\":\"The :attribute has already been taken.\",\"unique_in_email_change_request\":\"The :attribute has already been taken for new email request.\",\"unique_client_member_email\":\"The :attribute has already been taken.\"},\"new_email\":{\"unique_email\":\"The :attribute has already been taken.\"},\"custom_domain\":{\"domain\":\"The :attribute format is invalid.\"},\"comment\":{\"verify_comment\":\"The :attribute field is required.\"}},\"attributes\":[],\"reactions\":{\"14\":[\"Ooops... No changes made!!\",\"Ooops... Nothing to process!!\",\"It seems you didn't modified anything!!\"],\"15\":[\"Please wait files uploading in progress ...\",\"Please wait a while its in progress ...\"],\"16\":\"Files uploaded successfully\",\"4\":[\"Oh..no...Something left invalid!!\",\"Ooops... Validation Errrrors...!!\",\"Oh... it looks invalid...!!\",\"Something went wrong with validation!!\"],\"1\":\"Request processed successfully\",\"6\":\"Invalid request access\",\"19\":\"Oooops ... something went wrong on server. Try after some time!!\",\"20\":{\"0\":\"Invalid request token. Please reload page and try again!!\",\"1\":\"Request token Expired. Please reload page and try again!!\",\"attribute-name\":{\"rule-name\":\"custom-message\"}},\"attributes\":[]}},\"js_string\":\"js-string\"}},\"appConfig\":{\"debug\":false,\"appBaseURL\":\"https:\\\/\\\/app.wesal.plus\\\/\"},\"auth_info\":{\"authorized\":false,\"reaction_code\":9},\"message\":\"\"}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User Conversation List",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/get-user-conversations",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/get-user-conversations"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Conversation List",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:specificUserId\/single-conversation",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:specificUserId\/single-conversation",
+                            "variable": [
+                                {
+                                    "id": "specificUserId",
+                                    "key": "specificUserId",
+                                    "value": "sed",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User Conversation",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:userId\/get-user-messages",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:userId\/get-user-messages",
+                            "variable": [
+                                {
+                                    "id": "userId",
+                                    "key": "userId",
+                                    "value": "qui",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Stickers",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/fetch-stickers",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/fetch-stickers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare user caller reject call",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:receiverUserUid\/caller-reject-call",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:receiverUserUid\/caller-reject-call",
+                            "variable": [
+                                {
+                                    "id": "receiverUserUid",
+                                    "key": "receiverUserUid",
+                                    "value": "enim",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare user receiver reject call",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:callerUserUid\/receiver-reject-call",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:callerUserUid\/receiver-reject-call",
+                            "variable": [
+                                {
+                                    "id": "callerUserUid",
+                                    "key": "callerUserUid",
+                                    "value": "voluptatem",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare Caller Calling Errors Request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:receiverUserUid\/caller-errors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:receiverUserUid\/caller-errors",
+                            "variable": [
+                                {
+                                    "id": "receiverUserUid",
+                                    "key": "receiverUserUid",
+                                    "value": "facilis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare Receiver Calling Errors Request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:callerUserUid\/receiver-errors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:callerUserUid\/receiver-errors",
+                            "variable": [
+                                {
+                                    "id": "callerUserUid",
+                                    "key": "callerUserUid",
+                                    "value": "ut",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare Receiver Calling Busy Errors Request",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messenger\/:callerUserUid\/receiver-busy-call",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/messenger\/:callerUserUid\/receiver-busy-call",
+                            "variable": [
+                                {
+                                    "id": "callerUserUid",
+                                    "key": "callerUserUid",
+                                    "value": "corporis",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "50"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "View Home Page\n----------------------------------------------------------------",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/home",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/home"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "49"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "View Home Page\n----------------------------------------------------------------",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/encounter-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/encounter-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "48"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "View Home Page\n----------------------------------------------------------------",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/random-user",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/random-user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "47"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Filter data and show filter view",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/find-matches-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/find-matches-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "46"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show user setting view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/:pageType\/get-setting-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/:pageType\/get-setting-data",
+                            "variable": [
+                                {
+                                    "id": "pageType",
+                                    "key": "pageType",
+                                    "value": "ipsam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "45"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "prepare user photos.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/uploaded-photos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/uploaded-photos"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "44"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "process Boost Profile.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/profile\/read-profile-details",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/profile\/read-profile-details"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "43"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "prepare user profile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/profile\/:username\/read-profile-details",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/profile\/:username\/read-profile-details",
+                            "variable": [
+                                {
+                                    "id": "username",
+                                    "key": "username",
+                                    "value": "aperiam",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "42"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Prepare user profile edit options",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/profile\/prepare-profile-update",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/profile\/prepare-profile-update"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "41"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show user Transaction List.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/credit-wallet\/transaction-list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/credit-wallet\/transaction-list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "-----------------------------------------------------------------------",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "40"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get user wallet info like credit balance",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/credit-wallet\/wallet-info-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/credit-wallet\/wallet-info-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "39"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Handle complete transaction request.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/credit-wallet\/credit-wallet-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/credit-wallet\/credit-wallet-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "38"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "User Premium Plan View.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/premium-plan\/premium-plan-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/premium-plan\/premium-plan-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "37"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User my Disliked view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/who-liked-me",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/who-liked-me"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "36"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get mutual like view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/mutual-likes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/mutual-likes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "35"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User my like view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/my-likes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/my-likes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "34"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User my Disliked view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/disliked",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/disliked"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "33"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get profile visitors view.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/visitors",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/visitors"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "32"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get block user view and user list.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/blocked-users-list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/blocked-users-list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "31"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "get booster price and period",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get-booster-info",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get-booster-info"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "30"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "prepare featured users.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get-featured-user-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/get-featured-user-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "29"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Notification DataTable data.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications\/notification-list",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/notifications\/notification-list"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "-----------------------------------------------------------------------",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "28"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Handle read all notification request.",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/notifications\/notification-data",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/notifications\/notification-data"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "27"
+                                },
+                                {
+                                    "key": "vary",
+                                    "value": "Origin"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"response_token\":0,\"reaction\":2,\"incident\":null,\"client_models\":[],\"data\":{\"message\":\"The payload is invalid.\",\"auth_info\":{\"authorized\":false,\"reaction_code\":9}}}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

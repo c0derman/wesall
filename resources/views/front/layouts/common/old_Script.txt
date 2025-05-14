@@ -1,0 +1,321 @@
+<!-- <script>
+    // counter
+    const counters = document.querySelectorAll(".statistics .count");
+    const speed = 700;
+
+    const isElementInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    const startCounterIfVisible = (counter) => {
+        if (isElementInViewport(counter)) {
+            const updateCount = () => {
+                const target = parseInt(counter.getAttribute("data-target"));
+                const count = parseInt(counter.innerText);
+                const increment = Math.ceil(target / speed);
+
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        } else {
+            window.addEventListener('scroll', () => {
+                if (isElementInViewport(counter)) {
+                    startCounterIfVisible(counter);
+                    // Remove the event listener once the counter starts
+                    window.removeEventListener('scroll', arguments.callee);
+                }
+            });
+        }
+    };
+
+    counters.forEach(startCounterIfVisible);
+</script> -->
+
+
+
+
+<!--  cart custtom script-->
+
+<!-- <script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+</script>
+<script>
+    $('document').ready(function(){
+    document.getElementById('fileInput').addEventListener('change', function() {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                const imgBox = document.querySelector('.img_box');
+                imgBox.innerHTML = ''; // Clear previous content
+                const img = document.createElement('img');
+                img.src = reader.result;
+                img.alt = 'Selected Image';
+                img.className = 'img-fluid rounded-circle';
+                img.style.cssText = 'width: 100%; height: 100%;';
+                imgBox.style.cssText = 'background: transparent; width:213px;height:200px;padding: 0';
+                imgBox.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        }
+    });
+});
+</script>
+<script>
+    function showForm(formId) {
+        var forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.classList.add('d-none');
+        });
+        // Show the selected form
+        document.querySelector('.' + formId).classList.remove('d-none');
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const copyIcons = document.querySelectorAll('.fa-copy');
+
+        copyIcons.forEach(icon => {
+            icon.addEventListener('click', function() {
+                const textToCopy = this.previousElementSibling.textContent.trim();
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    alert('copied successfully!');
+                }).catch(err => {
+                    console.error('Error copying text: ', err);
+                });
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.select2').select2();
+    });
+
+
+    let categoryCards = document.querySelector('.categoryCards');
+    let rowsCards = document.querySelector('.rowsCards');
+    let paginationCards = document.querySelectorAll('#paginationCard .card_pagination');
+    let paginationCardsImg = document.querySelectorAll('#paginationCard .paginationCardImg');
+    let paginationCardsData = document.querySelectorAll('#paginationCard .paginationCardData');
+
+    rowsCards.addEventListener('click', function() {
+        categoryCards.classList.remove('active');
+        rowsCards.classList.add('active');
+
+        paginationCards.forEach(paginationCard => {
+            paginationCard.classList.add('col-sm-12');
+        });
+        paginationCardsImg.forEach(paginationCardImg => {
+            paginationCardImg.classList.remove('col-12');
+            paginationCardImg.classList.add('col-4');
+        });
+        paginationCardsData.forEach(paginationCardData => {
+            paginationCardData.classList.remove('col-12');
+            paginationCardData.classList.add('col-8');
+        });
+
+        let paginationCardsDesc = document.querySelectorAll('#paginationCard article p');
+
+        paginationCardsDesc.forEach(paginationCardDesc => {
+            paginationCardDesc.style.cssText = 'white-space: normal;';
+        });
+    });
+
+    categoryCards.addEventListener('click', function() {
+        rowsCards.classList.remove('active');
+        categoryCards.classList.add('active');
+
+        paginationCards.forEach(paginationCard => {
+            paginationCard.classList.remove('col-sm-12');
+
+            paginationCardsImg.forEach(paginationCardImg => {
+                paginationCardImg.classList.remove('col-4');
+                paginationCardImg.classList.add('col-12');
+            });
+            paginationCardsData.forEach(paginationCardData => {
+                paginationCardData.classList.remove('col-8');
+                paginationCardData.classList.add('col-12');
+            });
+        });
+
+        let paginationCardsDesc = document.querySelectorAll('#paginationCard article p');
+
+        paginationCardsDesc.forEach(paginationCardDesc => {
+            paginationCardDesc.style.cssText = 'white-space: nowrap;';
+        });
+    });
+</script>
+
+<script>
+    function checkAll(filterClass) {
+        // Get the "Check All" checkbox and all other checkboxes
+        const checkAllCheckbox = document.querySelector(`.${filterClass} #checkAll`);
+        const checkboxes = document.querySelectorAll(`.${filterClass} .form-check-input:not(.check-all)`);
+
+        // Add event listener to the "Check All" checkbox
+        checkAllCheckbox.addEventListener('change', function() {
+            checkboxes.forEach(function(checkbox) {
+                checkbox.checked = checkAllCheckbox.checked;
+            });
+        });
+
+        // Add event listener to other checkboxes to uncheck "Check All" if any checkbox is unchecked
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (!this.checked) {
+                    checkAllCheckbox.checked = false;
+                }
+            });
+        });
+    }
+</script> -->
+
+
+
+
+<!-- <script>
+    let btnSecondaryOne = document.getElementById("btnSecondaryOne")
+    let btnSecondaryTwo = document.getElementById("btnSecondaryTwo")
+    let btnSecondaryThree = document.getElementById("btnSecondaryThree")
+    let secondarySectionOne = document.querySelector(".secondary-one")
+    let secondarySectionTwo = document.querySelector(".secondary-two")
+    let secondarySectionThree = document.querySelector(".secondary-three")
+
+    function secondaryOneFunction() {
+        btnSecondaryOne.classList.add("btn-primary")
+        btnSecondaryOne.classList.add("text-white")
+        btnSecondaryTwo.classList.remove("btn-primary")
+        btnSecondaryTwo.classList.remove("text-white")
+        btnSecondaryThree.classList.remove("btn-primary")
+        btnSecondaryThree.classList.remove("text-white")
+
+        secondarySectionOne.classList.remove("d-none")
+        secondarySectionTwo.classList.add("d-none")
+        secondarySectionThree.classList.add("d-none")
+    }
+
+    function secondaryTwoFunction() {
+        btnSecondaryTwo.classList.add("btn-primary")
+        btnSecondaryTwo.classList.add("text-white")
+        btnSecondaryOne.classList.remove("btn-primary")
+        btnSecondaryOne.classList.remove("text-white")
+        btnSecondaryOne.classList.add("text-primary")
+        btnSecondaryThree.classList.remove("btn-primary")
+        btnSecondaryThree.classList.remove("text-white")
+
+        secondarySectionTwo.classList.remove("d-none")
+        secondarySectionOne.classList.add("d-none")
+        secondarySectionThree.classList.add("d-none")
+    }
+
+    function secondaryThreeFunction() {
+        btnSecondaryThree.classList.add("btn-primary")
+        btnSecondaryThree.classList.add("text-white")
+        btnSecondaryTwo.classList.remove("btn-primary")
+        btnSecondaryTwo.classList.remove("text-white")
+        btnSecondaryOne.classList.remove("btn-primary")
+        btnSecondaryOne.classList.add("text-primary")
+        btnSecondaryOne.classList.remove("text-white")
+
+        secondarySectionTwo.classList.add("d-none")
+        secondarySectionOne.classList.add("d-none")
+        secondarySectionThree.classList.remove("d-none")
+    }
+
+
+    let popUp = document.querySelector(".pop-up")
+    let overlay = document.querySelector(".overlay")
+
+    function showPopUp() {
+        popUp.classList.remove("d-none")
+        overlay.classList.remove("d-none")
+    }
+
+    function hidePopUp() {
+        popUp.classList.add("d-none")
+        overlay.classList.add("d-none")
+    }
+    overlay.addEventListener("click", () => {
+        popUp.classList.add("d-none")
+        overlay.classList.add("d-none")
+    });
+
+
+
+
+
+    let filterPage = document.querySelector(".filter-page")
+    let resultsPage = document.querySelector(".results-page")
+
+    function goToResults() {
+        popUp.classList.add("d-none")
+        overlay.classList.add("d-none")
+        resultsPage.classList.remove("d-none")
+        filterPage.classList.add("d-none")
+    }
+
+    let boysBtn = document.getElementById("boysBtn")
+    let girlsBtn = document.getElementById("girlsBtn")
+    let boys = document.querySelectorAll(".boys")
+    let girls = document.querySelectorAll(".girls")
+
+    function showBoys() {
+        boysBtn.classList.add("btn-primary")
+        boysBtn.classList.add("text-white")
+        girlsBtn.classList.add("text-primary")
+        girlsBtn.classList.remove("text-white")
+        girlsBtn.classList.remove("btn-primary")
+        boys.forEach((boy) => {
+            boy.style.display = "flex"
+        })
+        girls.forEach((boy) => {
+            boy.style.display = "none"
+        })
+    }
+
+    function showGirls() {
+        girlsBtn.classList.add("btn-primary")
+        girlsBtn.classList.add("text-white")
+        boysBtn.classList.remove("btn-primary")
+        boysBtn.classList.add("text-primary")
+        boysBtn.classList.remove("text-white")
+        girls.forEach((boy) => {
+            boy.style.display = "flex"
+        })
+        boys.forEach((boy) => {
+            boy.style.display = "none"
+        })
+    }
+
+    // Function to toggle fill/empty behavior
+    function toggleFill() {
+        // Select all enabled inputs within the active secondary section
+        let activeSection = document.querySelector('.filter-page'); // Example: Adjust based on active section
+        if (!activeSection) return; // Ensure active section is found
+
+        let inputs = activeSection.querySelectorAll('input:not([disabled])');
+
+        inputs.forEach(input => {
+            if (input.value === '') {
+                input.value = '100';
+            } else {
+                input.value = '';
+            }
+        });
+    }
+</script> -->

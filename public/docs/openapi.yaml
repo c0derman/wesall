@@ -1,0 +1,3927 @@
+openapi: 3.0.3
+info:
+  title: wesal
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'https://app.wesal.plus'
+paths:
+  /api/base-data:
+    get:
+      summary: 'Get ac master view template'
+      operationId: getAcMasterViewTemplate
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 1
+                  incident: null
+                  client_models: []
+                  data:
+                    __appImmutables:
+                      auth_info:
+                        authorized: false
+                        reaction_code: 9
+                      availableRoutes:
+                        - liap.serverNotifications
+                        - sanctum.csrf-cookie
+                        - ignition.healthCheck
+                        - ignition.executeSolution
+                        - ignition.updateConfig
+                        - __laraware.state_via_route
+                        - __laraware.redirect_via_post
+                        - __laraware.post_event_streamed_request
+                        - base_data
+                        - api.user.read.user_conversations_list
+                        - api.user.read.user_single_conversation
+                        - api.user.read.user_messages
+                        - api.user.read.get_stickers
+                        - api.user.write.caller.reject_call
+                        - api.user.write.receiver.reject_call
+                        - api.user.write.caller.error
+                        - api.user.write.receiver.error
+                        - api.user.write.receiver.call_busy
+                        - api.user.read.home_page_data
+                        - api.user.read.encounter_data
+                        - api.user.read.random_users
+                        - api.user.find_matches.read.support_data
+                        - api.user.read.setting
+                        - api.user.read.photos
+                        - api.user.read.wizard_profile_data
+                        - api.user.read.profile
+                        - api.user.read.profile_update_data
+                        - api.user.credit_wallet.read.wallet_transaction_list
+                        - api.user.credit_wallet.read.wallet_info
+                        - api.user.credit_wallet.read.wallet_data
+                        - api.user.read.premium_plan_data
+                        - api.user.read.who_liked_me_users
+                        - api.user.read.mutual_like_users
+                        - api.user.read.my_liked_users
+                        - api.user.read.my_disliked_users
+                        - api.user.read.profile_visitors_users
+                        - api.user.read.block_user_list
+                        - api.user.read.booster_data
+                        - api.user.featured_user.read.support_data
+                        - api.user.notification.read.list
+                        - api.user.notification.read.data
+                        - locale.change
+                        - user.read.contact
+                        - user.contact.process
+                        - page.preview
+                        - landing_page
+                        - search_matches
+                        - user.login
+                        - user.login.process
+                        - user.sign_up
+                        - user.sign_up.process
+                        - user.forgot_password
+                        - user.forgot_password.process
+                        - user.reset_password
+                        - user.reset_password.process
+                        - user.account.activation
+                        - login.with.otp
+                        - send.otp
+                        - verify.otp
+                        - verify.otp.process
+                        - social.user.login
+                        - social.user.login.callback
+                        - site_theme.change
+                        - home_page
+                        - user.profile_view
+                        - user.get_profile_data
+                        - user.photos_setting
+                        - update.log
+                        - user.read.find_matches
+                        - user.update_profile.wizard
+                        - user.profile.wizard_completed
+                        - user.profile.finish_wizard
+                        - user.logout
+                        - user.change_password
+                        - user.change_password.process
+                        - user.change_email
+                        - user.change_email.process
+                        - user.new_email.activation
+                        - user.new_email.read.success
+                        - user.write.like_dislike
+                        - user.my_liked_view
+                        - user.my_disliked_view
+                        - user.who_liked_me_view
+                        - user.mutual_like_view
+                        - user.profile_visitors_view
+                        - user.write.send_gift
+                        - user.write.report_user
+                        - user.write.block_user
+                        - user.read.block_user_list
+                        - user.write.unblock_user
+                        - user.write.boost_profile
+                        - user.read.booster_data
+                        - user.write.delete_account
+                        - user.read.setting
+                        - user.write.setting
+                        - user.write.basic_setting
+                        - user.write.update_profile_wizard
+                        - user.read.search_static_cities
+                        - user.write.store_city
+                        - user.write.location_data
+                        - user.upload_profile_image
+                        - user.upload_cover_image
+                        - user.write.profile_setting
+                        - user.upload_photos
+                        - user.upload_photos.write.delete
+                        - user.read.messenger
+                        - user.read.all_conversation
+                        - user.read.individual_conversation
+                        - user.read.user_conversation
+                        - user.write.send_message
+                        - user.update.user_conversation
+                        - user.write.accept_decline_message_request
+                        - user.write.delete_message
+                        - user.write.caller.call_initialize
+                        - user.write.receiver.join_call
+                        - user.write.caller.reject_call
+                        - user.write.receiver.reject_call
+                        - user.write.caller.error
+                        - user.write.receiver.error
+                        - user.write.receiver.call_accept
+                        - user.write.receiver.call_busy
+                        - user.write.delete_all_messages
+                        - user.read.get_stickers
+                        - user.write.buy_stickers
+                        - user.notification.read.view
+                        - user.notification.read.list
+                        - user.notification.write.read_all_notification
+                        - user.read.encounter.view
+                        - user.write.encounter.like_dislike
+                        - user.write.encounter.skip_user
+                        - user.premium_plan.read.view
+                        - user.premium_plan.write.buy_premium_plan
+                        - user.premium_plan.read.success_view
+                        - user.credit_wallet.read.view
+                        - user.wallet.transactions.read.view
+                        - user.credit_wallet.read.wallet_transaction_list
+                        - user.credit_wallet.write.paypal_transaction_complete
+                        - paypal.order.process
+                        - capture.paypal.checkout
+                        - user.credit_wallet.write.payment_process
+                        - user.credit_wallet.write.stripe.callback_url
+                        - user.credit_wallet.write.stripe.cancel_url
+                        - user.credit_wallet.write.razorpay.checkout
+                        - user.credit_wallet.write.coingate.checkout
+                        - user.credit_wallet.coingate.success
+                        - crypto.payment_process
+                        - verify.paystack.payment
+                        - callback.paystack.payment
+                        - manage.user.view_list
+                        - manage.user.photos_list
+                        - manage.user.read.photos_list
+                        - manage.user.write.photo_delete
+                        - manage.user.read.list
+                        - manage.user.add
+                        - manage.user.write.create
+                        - manage.user.edit
+                        - manage.user.write.update
+                        - manage.user.write.soft_delete
+                        - manage.user.write.permanent_delete
+                        - manage.user.write.restore_user
+                        - manage.user.write.block_user
+                        - manage.user.write.unblock_user
+                        - manage.user.read.details
+                        - manage.user.write.verify
+                        - manage.user.read.transaction_list
+                        - manage.user.write.allocate_credits
+                        - admin.login.fake.user_profile
+                        - manage.credit_package.read.list
+                        - manage.credit_package.add.view
+                        - manage.credit_package.write.add
+                        - manage.credit_package.edit.view
+                        - manage.credit_package.write.edit
+                        - manage.credit_package.write.delete
+                        - manage.fake_users.read.generator_options
+                        - manage.fake_users.write.create
+                        - manage.fake_users.read.messenger
+                        - manage.fake_users.list
+                        - fake_user.write.send_message
+                        - user.read.fake_user_conversation
+                        - fake_user.write.accept_decline_message_request
+                        - fake_user.write.like_dislike
+                        - admin.write.delete_message
+                        - admin.user.write.delete_all_messages
+                        - media.upload_temp_media
+                        - media.gift.upload_temp_media
+                        - media.sticker.upload_temp_media
+                        - media.package.upload_temp_media
+                        - media.upload_logo
+                        - media.upload_small_logo
+                        - media.upload_favicon
+                        - manage.dashboard
+                        - addEdit.item.read.update.data
+                        - field.write.delete
+                        - manage.configuration.product_registration
+                        - installation.version.create.registration
+                        - installation.version.create.remove_registration
+                        - manage.configuration.clear_cache
+                        - manage.configuration.mobile_app
+                        - manage.configuration.read
+                        - manage.configuration.write
+                        - manage.custom_fields.write
+                        - add.new.section
+                        - manage.help.read
+                        - manage.financial_transaction.read.view_list
+                        - manage.financial_transaction.read.list
+                        - manage.financial_transaction.write.delete.all_transaction
+                        - manage.page.view
+                        - manage.page.list
+                        - manage.page.add.view
+                        - manage.page.write.add
+                        - manage.page.edit.view
+                        - manage.page.write.edit
+                        - manage.page.write.delete
+                        - manage.item.gift.view
+                        - manage.item.gift.add.view
+                        - manage.item.gift.write.add
+                        - manage.item.gift.edit.view
+                        - manage.item.gift.write.edit
+                        - manage.item.gift.write.delete
+                        - manage.item.sticker.view
+                        - manage.item.sticker.write.upload_image
+                        - manage.item.sticker.add.view
+                        - manage.item.sticker.write.add
+                        - manage.item.sticker.edit.view
+                        - manage.item.sticker.write.edit
+                        - manage.item.sticker.write.delete
+                        - manage.abuse_report.read.list
+                        - manage.abuse_report.write.moderated
+                        - abuse_report.get.count
+                        - manage.translations.languages
+                        - manage.translations.write.language_create
+                        - manage.translations.write.language_update
+                        - manage.translations.write.language_delete
+                        - manage.translations.lists
+                        - manage.translations.scan
+                        - manage.translations.update
+                        - manage.translations.export
+                        - manage.translations.import
+                        - manage.translations.auto_translate
+                        - manage.translations.auto_translate_all
+                        - user.credit_wallet.write.coingate.callback_url
+                        - stripe-webhook
+                        - razorpay-webhook
+                        - crypto-webhook
+                        - paystack-webhook
+                      routes:
+                        liap.serverNotifications: in-app-purchase/liap/notifications
+                        sanctum.csrf-cookie: sanctum/csrf-cookie
+                        ignition.healthCheck: _ignition/health-check
+                        ignition.executeSolution: _ignition/execute-solution
+                        ignition.updateConfig: _ignition/update-config
+                        __laraware.state_via_route: 'state-via-route/{stateRouteInfo}'
+                        __laraware.redirect_via_post: 'redirect-via-post/{redirectPostData}'
+                        __laraware.post_event_streamed_request: post-event-streamed-request
+                        base_data: api/base-data
+                        api.user.read.user_conversations_list: api/messenger/get-user-conversations
+                        api.user.read.user_single_conversation: 'api/messenger/{specificUserId}/single-conversation'
+                        api.user.read.user_messages: 'api/messenger/{userId}/get-user-messages'
+                        api.user.read.get_stickers: api/messenger/fetch-stickers
+                        api.user.write.caller.reject_call: 'api/messenger/{receiverUserUid}/caller-reject-call'
+                        api.user.write.receiver.reject_call: 'api/messenger/{callerUserUid}/receiver-reject-call'
+                        api.user.write.caller.error: 'api/messenger/{receiverUserUid}/caller-errors'
+                        api.user.write.receiver.error: 'api/messenger/{callerUserUid}/receiver-errors'
+                        api.user.write.receiver.call_busy: 'api/messenger/{callerUserUid}/receiver-busy-call'
+                        api.user.read.home_page_data: api/home
+                        api.user.read.encounter_data: api/encounter-data
+                        api.user.read.random_users: api/random-user
+                        api.user.find_matches.read.support_data: api/find-matches-data
+                        api.user.read.setting: 'api/{pageType}/get-setting-data'
+                        api.user.read.photos: api/uploaded-photos
+                        api.user.read.wizard_profile_data: api/profile/read-profile-details
+                        api.user.read.profile: 'api/profile/{username}/read-profile-details'
+                        api.user.read.profile_update_data: api/profile/prepare-profile-update
+                        api.user.credit_wallet.read.wallet_transaction_list: api/credit-wallet/transaction-list
+                        api.user.credit_wallet.read.wallet_info: api/credit-wallet/wallet-info-data
+                        api.user.credit_wallet.read.wallet_data: api/credit-wallet/credit-wallet-data
+                        api.user.read.premium_plan_data: api/premium-plan/premium-plan-data
+                        api.user.read.who_liked_me_users: api/who-liked-me
+                        api.user.read.mutual_like_users: api/mutual-likes
+                        api.user.read.my_liked_users: api/my-likes
+                        api.user.read.my_disliked_users: api/disliked
+                        api.user.read.profile_visitors_users: api/visitors
+                        api.user.read.block_user_list: api/blocked-users-list
+                        api.user.read.booster_data: api/get-booster-info
+                        api.user.featured_user.read.support_data: api/get-featured-user-data
+                        api.user.notification.read.list: api/notifications/notification-list
+                        api.user.notification.read.data: api/notifications/notification-data
+                        locale.change: 'change-language/{localeID}'
+                        user.read.contact: contact
+                        user.contact.process: post-contact
+                        page.preview: 'page/{pageUId}/{title}'
+                        landing_page: /
+                        search_matches: search-matches
+                        user.login: user/login
+                        user.login.process: user/login-process
+                        user.sign_up: user/sign-up
+                        user.sign_up.process: user/sign-up-process
+                        user.forgot_password: user/forgot-password
+                        user.forgot_password.process: user/forgot-password-process
+                        user.reset_password: user/reset-password
+                        user.reset_password.process: 'user/reset-password-process/{reminderToken}'
+                        user.account.activation: 'user/{userUid}/account-activation'
+                        login.with.otp: user/login-with-otp
+                        send.otp: user/send-otp
+                        verify.otp: user/verify-otp
+                        verify.otp.process: user/verify-otp-process
+                        social.user.login: 'user/social-login/request/{provider}'
+                        social.user.login.callback: 'user/social-login/response/{provider}'
+                        site_theme.change: 'change-theme/{themeName}'
+                        home_page: home
+                        user.profile_view: '@{username}'
+                        user.get_profile_data: '{username}/get-user-profile-data'
+                        user.photos_setting: '@{username}/photos'
+                        update.log: update-log
+                        user.read.find_matches: find-matches
+                        user.update_profile.wizard: user/update-profile-wizard
+                        user.profile.wizard_completed: user/check-profile-updated
+                        user.profile.finish_wizard: user/finish-wizard
+                        user.logout: user/logout
+                        user.change_password: user/change-password
+                        user.change_password.process: user/change-password-process
+                        user.change_email: user/change-email
+                        user.change_email.process: user/change-email-process
+                        user.new_email.activation: 'user/{userUid}/{newEmail}/new-email-activation'
+                        user.new_email.read.success: user/update-email-success
+                        user.write.like_dislike: 'user/{toUserUid}/{like}/user-like-dislike'
+                        user.my_liked_view: user/liked
+                        user.my_disliked_view: user/disliked
+                        user.who_liked_me_view: user/who-liked-me
+                        user.mutual_like_view: user/mutual-likes
+                        user.profile_visitors_view: user/visitors
+                        user.write.send_gift: 'user/{sendUserUId}/send-gift'
+                        user.write.report_user: 'user/{sendUserUId}/report-user'
+                        user.write.block_user: user/block-user
+                        user.read.block_user_list: user/blocked-users
+                        user.write.unblock_user: 'user/{userUid}/unblock-user'
+                        user.write.boost_profile: user/boost-profile
+                        user.read.booster_data: user/get-booster-info
+                        user.write.delete_account: user/delete-account
+                        user.read.setting: 'user/settings/{pageType}'
+                        user.write.setting: 'user/settings/{pageType}/process-user-setting-store'
+                        user.write.basic_setting: user/settings/process-basic-settings
+                        user.write.update_profile_wizard: user/settings/process-update-profile-wizard
+                        user.read.search_static_cities: user/settings/search-static-cities
+                        user.write.store_city: user/settings/store-city
+                        user.write.location_data: user/settings/process-location-data
+                        user.upload_profile_image: user/settings/upload-profile-image
+                        user.upload_cover_image: user/settings/upload-cover-image
+                        user.write.profile_setting: user/settings/process-profile-setting
+                        user.upload_photos: user/settings/upload-photos
+                        user.upload_photos.write.delete: 'user/settings/{photoUid}/delete-photos'
+                        user.read.messenger: user/messenger
+                        user.read.all_conversation: user/messenger/all-conversation
+                        user.read.individual_conversation: 'user/messenger/{specificUserId}/individual-conversation'
+                        user.read.user_conversation: 'user/messenger/{userId}/get-user-conversation'
+                        user.write.send_message: 'user/messenger/{userId}/process-send-message'
+                        user.update.user_conversation: 'user/messenger/{userId}/update-user-conversation'
+                        user.write.accept_decline_message_request: 'user/messenger/{userId}/process-accept-decline-message-request'
+                        user.write.delete_message: 'user/messenger/{chatId}/{userId}/delete-message'
+                        user.write.caller.call_initialize: 'user/messenger/{userUId}/{type}/call-initialize'
+                        user.write.receiver.join_call: user/messenger/join-call
+                        user.write.caller.reject_call: 'user/messenger/{receiverUserUid}/caller-reject-call'
+                        user.write.receiver.reject_call: 'user/messenger/{callerUserUid}/receiver-reject-call'
+                        user.write.caller.error: 'user/messenger/{receiverUserUid}/caller-errors'
+                        user.write.receiver.error: 'user/messenger/{callerUserUid}/receiver-errors'
+                        user.write.receiver.call_accept: 'user/messenger/{receiverUserUid}/receiver-call-accept'
+                        user.write.receiver.call_busy: 'user/messenger/{callerUserUid}/receiver-busy-call'
+                        user.write.delete_all_messages: 'user/messenger/{userId}/delete-all-message'
+                        user.read.get_stickers: user/messenger/get-stickers
+                        user.write.buy_stickers: user/messenger/process-buy-sticker
+                        user.notification.read.view: user/notifications
+                        user.notification.read.list: user/notifications/notification-list
+                        user.notification.write.read_all_notification: user/notifications/read-all-notification
+                        user.read.encounter.view: user/encounters
+                        user.write.encounter.like_dislike: 'user/encounters/{toUserUid}/{like}/user-encounter-like-dislike'
+                        user.write.encounter.skip_user: 'user/encounters/{toUserUid}/skip-encounter-user'
+                        user.premium_plan.read.view: user/premium
+                        user.premium_plan.write.buy_premium_plan: user/premium/buy-plans
+                        user.premium_plan.read.success_view: user/premium/success
+                        user.credit_wallet.read.view: user/credits
+                        user.wallet.transactions.read.view: user/credits/transactions
+                        user.credit_wallet.read.wallet_transaction_list: user/credits/user-wallet-transaction-list
+                        user.credit_wallet.write.paypal_transaction_complete: 'user/credits/{packageUid}/paypal-transaction-complete'
+                        paypal.order.process: user/credits/paypal-order-submit
+                        capture.paypal.checkout: user/credits/paypal/capture-paypal-order
+                        user.credit_wallet.write.payment_process: user/credits/payment-process
+                        user.credit_wallet.write.stripe.callback_url: user/credits/stripe-callback
+                        user.credit_wallet.write.stripe.cancel_url: user/credits/stripe-cancel
+                        user.credit_wallet.write.razorpay.checkout: user/credits/razorpay-checkout
+                        user.credit_wallet.write.coingate.checkout: user/credits/coingate-checkout
+                        user.credit_wallet.coingate.success: 'user/credits/coingate-success-url/{status}'
+                        crypto.payment_process: user/credits/crypto-checkout
+                        verify.paystack.payment: 'user/credits/paystack-verify/{reference}'
+                        callback.paystack.payment: user/credits/paystack-callback-url
+                        manage.user.view_list: 'admin/manage/user/{status}/list/{userType?}'
+                        manage.user.photos_list: admin/manage/user/photos
+                        manage.user.read.photos_list: admin/manage/user/photos-list
+                        manage.user.write.photo_delete: 'admin/manage/user/{userUid}/{type}/{profileOrPhotoUid}/process-delete-photo'
+                        manage.user.read.list: 'admin/manage/user/{status}/users-list/{userType?}'
+                        manage.user.add: admin/manage/user/add
+                        manage.user.write.create: admin/manage/user/process-add
+                        manage.user.edit: 'admin/manage/user/{userUid}/edit'
+                        manage.user.write.update: 'admin/manage/user/{userUid}/process-update'
+                        manage.user.write.soft_delete: 'admin/manage/user/{userUid}/process-soft-delete'
+                        manage.user.write.permanent_delete: 'admin/manage/user/{userUid}/process-permanent-delete'
+                        manage.user.write.restore_user: 'admin/manage/user/{userUid}/process-restore-user'
+                        manage.user.write.block_user: 'admin/manage/user/{userUid}/process-block-user'
+                        manage.user.write.unblock_user: 'admin/manage/user/{userUid}/process-unblock-user'
+                        manage.user.read.details: 'admin/manage/user/{userUid}/details'
+                        manage.user.write.verify: 'admin/manage/user/{userUid}/verify-profile'
+                        manage.user.read.transaction_list: 'admin/manage/user/{userUid}/manage-user-transaction-list'
+                        manage.user.write.allocate_credits: admin/manage/user/add-user-allocate-credits
+                        admin.login.fake.user_profile: 'admin/manage/user/process-to-login/{userId}'
+                        manage.credit_package.read.list: admin/manage/credit-package/list
+                        manage.credit_package.add.view: admin/manage/credit-package/add-package
+                        manage.credit_package.write.add: admin/manage/credit-package/add-package-process
+                        manage.credit_package.edit.view: 'admin/manage/credit-package/{packageUId}/edit-package'
+                        manage.credit_package.write.edit: 'admin/manage/credit-package/{packageUId}/edit-package-process'
+                        manage.credit_package.write.delete: 'admin/manage/credit-package/{packageUId}/delete-package'
+                        manage.fake_users.read.generator_options: admin/manage/fake-user/generate
+                        manage.fake_users.write.create: admin/manage/fake-user/generate-fake-users
+                        manage.fake_users.read.messenger: admin/manage/fake-user/conversations
+                        manage.fake_users.list: 'admin/manage/fake-user/conversations/fake-user-list/{fakeUserId}'
+                        fake_user.write.send_message: 'admin/manage/fake-user/conversations/{userId}/process-send-message'
+                        user.read.fake_user_conversation: 'admin/manage/fake-user/conversations/{userId}/{fake_user_id}/get-fake-user-conversation'
+                        fake_user.write.accept_decline_message_request: 'admin/manage/fake-user/conversations/{userId}/{optionalLoggedInUserId}/process-accept-decline-message-request'
+                        fake_user.write.like_dislike: 'admin/manage/fake-user/conversations/{fromUserId}/{toUserUid}/{like}/user-like-dislike'
+                        admin.write.delete_message: 'admin/manage/fake-user/conversations/{chatId}/{userId}/{optionalLoggedInUserId}/delete-message'
+                        admin.user.write.delete_all_messages: 'admin/manage/fake-user/conversations/{userId}/{optionalLoggedInUserId}/delete-all-message'
+                        media.upload_temp_media: admin/media/upload-temp-media
+                        media.gift.upload_temp_media: admin/media/upload-gift-temp-media
+                        media.sticker.upload_temp_media: admin/media/upload-sticker-temp-media
+                        media.package.upload_temp_media: admin/media/upload-package-temp-media
+                        media.upload_logo: admin/media/upload-logo
+                        media.upload_small_logo: admin/media/upload-small-logo
+                        media.upload_favicon: admin/media/upload-favicon
+                        manage.dashboard: admin
+                        addEdit.item.read.update.data: 'admin/configuration/get-items-info/{groupName}/{itemPos}'
+                        field.write.delete: 'admin/configuration/process-custom-fields-delete/{groupName}/{itemPos}/{field}'
+                        manage.configuration.product_registration: admin/configuration/licence-information
+                        installation.version.create.registration: admin/configuration/licence-information-process
+                        installation.version.create.remove_registration: admin/configuration/licence-information-remove-process
+                        manage.configuration.clear_cache: admin/configuration/clear-system-cache
+                        manage.configuration.mobile_app: admin/configuration/mobile-app
+                        manage.configuration.read: 'admin/configuration/{pageType}'
+                        manage.configuration.write: 'admin/configuration/{pageType}/process-configuration-store'
+                        manage.custom_fields.write: 'admin/configuration/{pageType}/process-custom-fields-store'
+                        add.new.section: 'admin/configuration/{pageType}/add-new-section'
+                        manage.help.read: admin/help-references/emails
+                        manage.financial_transaction.read.view_list: 'admin/financial-transaction/{transactionType}/list'
+                        manage.financial_transaction.read.list: 'admin/financial-transaction/{transactionType}/transaction-list'
+                        manage.financial_transaction.write.delete.all_transaction: admin/financial-transaction/delete-all-test-transaction
+                        manage.page.view: admin/pages
+                        manage.page.list: admin/pages/list
+                        manage.page.add.view: admin/pages/add
+                        manage.page.write.add: admin/pages/page-add-process
+                        manage.page.edit.view: 'admin/pages/{pageUId}/edit'
+                        manage.page.write.edit: 'admin/pages/{pageUId}/page-edit-process'
+                        manage.page.write.delete: 'admin/pages/{pageUId}/page-delete'
+                        manage.item.gift.view: admin/gift
+                        manage.item.gift.add.view: admin/add-gift
+                        manage.item.gift.write.add: admin/add-gift-process
+                        manage.item.gift.edit.view: 'admin/{giftUId}/edit-gift'
+                        manage.item.gift.write.edit: 'admin/{giftUId}/edit-gift-process'
+                        manage.item.gift.write.delete: 'admin/{giftUId}/delete-gift'
+                        manage.item.sticker.view: admin/sticker
+                        manage.item.sticker.write.upload_image: admin/upload-sticker-image
+                        manage.item.sticker.add.view: admin/add-sticker
+                        manage.item.sticker.write.add: admin/add-sticker-process
+                        manage.item.sticker.edit.view: 'admin/{stickerUId}/edit-sticker'
+                        manage.item.sticker.write.edit: 'admin/{stickerUId}/edit-sticker-process'
+                        manage.item.sticker.write.delete: 'admin/{stickerUId}/delete-sticker'
+                        manage.abuse_report.read.list: 'admin/abuse-report/{status}/list'
+                        manage.abuse_report.write.moderated: admin/abuse-report/moderate-report
+                        abuse_report.get.count: admin/abuse-report/abuse-report-count
+                        manage.translations.languages: admin/translations
+                        manage.translations.write.language_create: admin/translations/process-language-store
+                        manage.translations.write.language_update: admin/translations/process-language-update
+                        manage.translations.write.language_delete: 'admin/translations/{languageId}/process-language-delete'
+                        manage.translations.lists: 'admin/translations/language/{languageId}/{languageType?}'
+                        manage.translations.scan: 'admin/translations/scan/{languageId}/{preventReload?}'
+                        manage.translations.update: 'admin/translations/update/{languageType?}'
+                        manage.translations.export: 'admin/translations/export/{languageId}'
+                        manage.translations.import: 'admin/translations/import/{languageId}'
+                        manage.translations.auto_translate: 'admin/translations/auto-translate/{serviceId}/{languageId}'
+                        manage.translations.auto_translate_all: 'admin/translations/auto-translate-all/{serviceId}'
+                        user.credit_wallet.write.coingate.callback_url: coingate-callback
+                        stripe-webhook: stripe/order-payment-webhook
+                        razorpay-webhook: razorpay/order-payment-razorpay-webhook
+                        crypto-webhook: crypto/crypto-order-payment-webhook
+                        paystack-webhook: paystack-webhook-order
+                      agora_app_id: ''
+                      pusher_key: ''
+                      pusher_cluster_key: ap2
+                      messages:
+                        validation:
+                          accepted: 'The :attribute must be accepted.'
+                          accepted_if: 'The :attribute field must be accepted when :other is :value.'
+                          active_url: 'The :attribute is not a valid URL.'
+                          after: 'The :attribute must be a date after :date.'
+                          after_or_equal: 'The :attribute must be a date after or equal to :date.'
+                          alpha: 'The :attribute may only contain letters.'
+                          alpha_dash: 'The :attribute may only contain letters, numbers, dashes and underscores.'
+                          alpha_num: 'The :attribute may only contain letters and numbers.'
+                          array: 'The :attribute must be an array.'
+                          ascii: 'The :attribute field must only contain single-byte alphanumeric characters and symbols.'
+                          before: 'The :attribute must be a date before :date.'
+                          before_or_equal: 'The :attribute must be a date before or equal to :date.'
+                          between:
+                            array: 'The :attribute must have between :min and :max items.'
+                            file: 'The :attribute must be between :min and :max kilobytes.'
+                            numeric: 'The :attribute must be between :min and :max.'
+                            string: 'The :attribute must be between :min and :max characters.'
+                          boolean: 'The :attribute field must be true or false.'
+                          can: 'The :attribute field contains an unauthorized value.'
+                          confirmed: 'The :attribute confirmation does not match.'
+                          current_password: 'The password is incorrect.'
+                          date: 'The :attribute is not a valid date.'
+                          date_equals: 'The :attribute must be a date equal to :date.'
+                          date_format: 'The :attribute does not match the format :format.'
+                          decimal: 'The :attribute field must have :decimal decimal places.'
+                          declined: 'The :attribute field must be declined.'
+                          declined_if: 'The :attribute field must be declined when :other is :value.'
+                          different: 'The :attribute and :other must be different.'
+                          digits: 'The :attribute must be :digits digits.'
+                          digits_between: 'The :attribute must be between :min and :max digits.'
+                          dimensions: 'The :attribute has invalid image dimensions.'
+                          distinct: 'The :attribute field has a duplicate value.'
+                          doesnt_end_with: 'The :attribute field must not end with one of the following: :values.'
+                          doesnt_start_with: 'The :attribute field must not start with one of the following: :values.'
+                          email: 'The :attribute must be a valid email address.'
+                          ends_with: 'The :attribute must end with one of the following: :values.'
+                          enum: 'The selected :attribute is invalid.'
+                          exists: 'The selected :attribute is invalid.'
+                          extensions: 'The :attribute field must have one of the following extensions: :values.'
+                          file: 'The :attribute must be a file.'
+                          filled: 'The :attribute field must have a value.'
+                          gt:
+                            array: 'The :attribute must have more than :value items.'
+                            file: 'The :attribute must be greater than :value kilobytes.'
+                            numeric: 'The :attribute must be greater than :value.'
+                            string: 'The :attribute must be greater than :value characters.'
+                          gte:
+                            array: 'The :attribute must have :value items or more.'
+                            file: 'The :attribute must be greater than or equal :value kilobytes.'
+                            numeric: 'The :attribute must be greater than or equal :value.'
+                            string: 'The :attribute must be greater than or equal :value characters.'
+                          hex_color: 'The :attribute field must be a valid hexadecimal color.'
+                          image: 'The :attribute must be an image.'
+                          in: 'The selected :attribute is invalid.'
+                          in_array: 'The :attribute field does not exist in :other.'
+                          integer: 'The :attribute must be an integer.'
+                          ip: 'The :attribute must be a valid IP address.'
+                          ipv4: 'The :attribute must be a valid IPv4 address.'
+                          ipv6: 'The :attribute must be a valid IPv6 address.'
+                          json: 'The :attribute must be a valid JSON string.'
+                          lowercase: 'The :attribute field must be lowercase.'
+                          lt:
+                            array: 'The :attribute must have less than :value items.'
+                            file: 'The :attribute must be less than :value kilobytes.'
+                            numeric: 'The :attribute must be less than :value.'
+                            string: 'The :attribute must be less than :value characters.'
+                          lte:
+                            array: 'The :attribute must not have more than :value items.'
+                            file: 'The :attribute must be less than or equal :value kilobytes.'
+                            numeric: 'The :attribute must be less than or equal :value.'
+                            string: 'The :attribute must be less than or equal :value characters.'
+                          mac_address: 'The :attribute field must be a valid MAC address.'
+                          max:
+                            array: 'The :attribute may not have more than :max items.'
+                            file: 'The :attribute may not be greater than :max kilobytes.'
+                            numeric: 'The :attribute may not be greater than :max.'
+                            string: 'The :attribute may not be greater than :max characters.'
+                          max_digits: 'The :attribute field must not have more than :max digits.'
+                          mimes: 'The :attribute must be a file of type: :values.'
+                          mimetypes: 'The :attribute must be a file of type: :values.'
+                          min:
+                            array: 'The :attribute must have at least :min items.'
+                            file: 'The :attribute must be at least :min kilobytes.'
+                            numeric: 'The :attribute must be at least :min.'
+                            string: 'The :attribute must be at least :min characters.'
+                          min_digits: 'The :attribute field must have at least :min digits.'
+                          missing: 'The :attribute field must be missing.'
+                          missing_if: 'The :attribute field must be missing when :other is :value.'
+                          missing_unless: 'The :attribute field must be missing unless :other is :value.'
+                          missing_with: 'The :attribute field must be missing when :values is present.'
+                          missing_with_all: 'The :attribute field must be missing when :values are present.'
+                          multiple_of: 'The :attribute field must be a multiple of :value.'
+                          not_in: 'The selected :attribute is invalid.'
+                          not_regex: 'The :attribute format is invalid.'
+                          numeric: 'The :attribute must be a number.'
+                          password: 'The password is incorrect.'
+                          present: 'The :attribute field must be present.'
+                          present_if: 'The :attribute field must be present when :other is :value.'
+                          present_unless: 'The :attribute field must be present unless :other is :value.'
+                          present_with: 'The :attribute field must be present when :values is present.'
+                          present_with_all: 'The :attribute field must be present when :values are present.'
+                          prohibited: 'The :attribute field is prohibited.'
+                          prohibited_if: 'The :attribute field is prohibited when :other is :value.'
+                          prohibited_unless: 'The :attribute field is prohibited unless :other is in :values.'
+                          prohibits: 'The :attribute field prohibits :other from being present.'
+                          regex: 'The :attribute format is invalid.'
+                          required: 'The :attribute field is required.'
+                          required_array_keys: 'The :attribute field must contain entries for: :values.'
+                          required_if: 'The :attribute field is required when :other is :value.'
+                          required_if_accepted: 'The :attribute field is required when :other is accepted.'
+                          required_unless: 'The :attribute field is required unless :other is in :values.'
+                          required_with: 'The :attribute field is required when :values is present.'
+                          required_with_all: 'The :attribute field is required when :values are present.'
+                          required_without: 'The :attribute field is required when :values is not present.'
+                          required_without_all: 'The :attribute field is required when none of :values are present.'
+                          same: 'The :attribute and :other must match.'
+                          size:
+                            array: 'The :attribute must contain :size items.'
+                            file: 'The :attribute must be :size kilobytes.'
+                            numeric: 'The :attribute must be :size.'
+                            string: 'The :attribute must be :size characters.'
+                          starts_with: 'The :attribute must start with one of the following: :values.'
+                          string: 'The :attribute must be a string.'
+                          timezone: 'The :attribute must be a valid zone.'
+                          unique: 'The :attribute has already been taken.'
+                          uploaded: 'The :attribute failed to upload.'
+                          uppercase: 'The :attribute field must be uppercase.'
+                          url: 'The :attribute format is invalid.'
+                          ulid: 'The :attribute field must be a valid ULID.'
+                          uuid: 'The :attribute must be a valid UUID.'
+                          custom:
+                            attribute-name:
+                              rule-name: custom-message
+                            confirmation_code:
+                              captcha: 'The confirmation code is invalid.'
+                            email:
+                              unique_email: 'The :attribute has already been taken.'
+                              unique_in_email_change_request: 'The :attribute has already been taken for new email request.'
+                              unique_client_member_email: 'The :attribute has already been taken.'
+                            new_email:
+                              unique_email: 'The :attribute has already been taken.'
+                            custom_domain:
+                              domain: 'The :attribute format is invalid.'
+                            comment:
+                              verify_comment: 'The :attribute field is required.'
+                          attributes: []
+                          reactions:
+                            '14':
+                              - 'Ooops... No changes made!!'
+                              - 'Ooops... Nothing to process!!'
+                              - "It seems you didn't modified anything!!"
+                            '15':
+                              - 'Please wait files uploading in progress ...'
+                              - 'Please wait a while its in progress ...'
+                            '16': 'Files uploaded successfully'
+                            '4':
+                              - 'Oh..no...Something left invalid!!'
+                              - 'Ooops... Validation Errrrors...!!'
+                              - 'Oh... it looks invalid...!!'
+                              - 'Something went wrong with validation!!'
+                            '1': 'Request processed successfully'
+                            '6': 'Invalid request access'
+                            '19': 'Oooops ... something went wrong on server. Try after some time!!'
+                            '20':
+                              '0': 'Invalid request token. Please reload page and try again!!'
+                              '1': 'Request token Expired. Please reload page and try again!!'
+                              attribute-name:
+                                rule-name: custom-message
+                            attributes: []
+                        js_string: js-string
+                    appConfig:
+                      debug: false
+                      appBaseURL: 'https://app.wesal.plus/'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                    message: ''
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 1
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      __appImmutables:
+                        type: object
+                        properties:
+                          auth_info:
+                            type: object
+                            properties:
+                              authorized:
+                                type: boolean
+                                example: false
+                              reaction_code:
+                                type: integer
+                                example: 9
+                          availableRoutes:
+                            type: array
+                            example:
+                              - liap.serverNotifications
+                              - sanctum.csrf-cookie
+                              - ignition.healthCheck
+                              - ignition.executeSolution
+                              - ignition.updateConfig
+                              - __laraware.state_via_route
+                              - __laraware.redirect_via_post
+                              - __laraware.post_event_streamed_request
+                              - base_data
+                              - api.user.read.user_conversations_list
+                              - api.user.read.user_single_conversation
+                              - api.user.read.user_messages
+                              - api.user.read.get_stickers
+                              - api.user.write.caller.reject_call
+                              - api.user.write.receiver.reject_call
+                              - api.user.write.caller.error
+                              - api.user.write.receiver.error
+                              - api.user.write.receiver.call_busy
+                              - api.user.read.home_page_data
+                              - api.user.read.encounter_data
+                              - api.user.read.random_users
+                              - api.user.find_matches.read.support_data
+                              - api.user.read.setting
+                              - api.user.read.photos
+                              - api.user.read.wizard_profile_data
+                              - api.user.read.profile
+                              - api.user.read.profile_update_data
+                              - api.user.credit_wallet.read.wallet_transaction_list
+                              - api.user.credit_wallet.read.wallet_info
+                              - api.user.credit_wallet.read.wallet_data
+                              - api.user.read.premium_plan_data
+                              - api.user.read.who_liked_me_users
+                              - api.user.read.mutual_like_users
+                              - api.user.read.my_liked_users
+                              - api.user.read.my_disliked_users
+                              - api.user.read.profile_visitors_users
+                              - api.user.read.block_user_list
+                              - api.user.read.booster_data
+                              - api.user.featured_user.read.support_data
+                              - api.user.notification.read.list
+                              - api.user.notification.read.data
+                              - locale.change
+                              - user.read.contact
+                              - user.contact.process
+                              - page.preview
+                              - landing_page
+                              - search_matches
+                              - user.login
+                              - user.login.process
+                              - user.sign_up
+                              - user.sign_up.process
+                              - user.forgot_password
+                              - user.forgot_password.process
+                              - user.reset_password
+                              - user.reset_password.process
+                              - user.account.activation
+                              - login.with.otp
+                              - send.otp
+                              - verify.otp
+                              - verify.otp.process
+                              - social.user.login
+                              - social.user.login.callback
+                              - site_theme.change
+                              - home_page
+                              - user.profile_view
+                              - user.get_profile_data
+                              - user.photos_setting
+                              - update.log
+                              - user.read.find_matches
+                              - user.update_profile.wizard
+                              - user.profile.wizard_completed
+                              - user.profile.finish_wizard
+                              - user.logout
+                              - user.change_password
+                              - user.change_password.process
+                              - user.change_email
+                              - user.change_email.process
+                              - user.new_email.activation
+                              - user.new_email.read.success
+                              - user.write.like_dislike
+                              - user.my_liked_view
+                              - user.my_disliked_view
+                              - user.who_liked_me_view
+                              - user.mutual_like_view
+                              - user.profile_visitors_view
+                              - user.write.send_gift
+                              - user.write.report_user
+                              - user.write.block_user
+                              - user.read.block_user_list
+                              - user.write.unblock_user
+                              - user.write.boost_profile
+                              - user.read.booster_data
+                              - user.write.delete_account
+                              - user.read.setting
+                              - user.write.setting
+                              - user.write.basic_setting
+                              - user.write.update_profile_wizard
+                              - user.read.search_static_cities
+                              - user.write.store_city
+                              - user.write.location_data
+                              - user.upload_profile_image
+                              - user.upload_cover_image
+                              - user.write.profile_setting
+                              - user.upload_photos
+                              - user.upload_photos.write.delete
+                              - user.read.messenger
+                              - user.read.all_conversation
+                              - user.read.individual_conversation
+                              - user.read.user_conversation
+                              - user.write.send_message
+                              - user.update.user_conversation
+                              - user.write.accept_decline_message_request
+                              - user.write.delete_message
+                              - user.write.caller.call_initialize
+                              - user.write.receiver.join_call
+                              - user.write.caller.reject_call
+                              - user.write.receiver.reject_call
+                              - user.write.caller.error
+                              - user.write.receiver.error
+                              - user.write.receiver.call_accept
+                              - user.write.receiver.call_busy
+                              - user.write.delete_all_messages
+                              - user.read.get_stickers
+                              - user.write.buy_stickers
+                              - user.notification.read.view
+                              - user.notification.read.list
+                              - user.notification.write.read_all_notification
+                              - user.read.encounter.view
+                              - user.write.encounter.like_dislike
+                              - user.write.encounter.skip_user
+                              - user.premium_plan.read.view
+                              - user.premium_plan.write.buy_premium_plan
+                              - user.premium_plan.read.success_view
+                              - user.credit_wallet.read.view
+                              - user.wallet.transactions.read.view
+                              - user.credit_wallet.read.wallet_transaction_list
+                              - user.credit_wallet.write.paypal_transaction_complete
+                              - paypal.order.process
+                              - capture.paypal.checkout
+                              - user.credit_wallet.write.payment_process
+                              - user.credit_wallet.write.stripe.callback_url
+                              - user.credit_wallet.write.stripe.cancel_url
+                              - user.credit_wallet.write.razorpay.checkout
+                              - user.credit_wallet.write.coingate.checkout
+                              - user.credit_wallet.coingate.success
+                              - crypto.payment_process
+                              - verify.paystack.payment
+                              - callback.paystack.payment
+                              - manage.user.view_list
+                              - manage.user.photos_list
+                              - manage.user.read.photos_list
+                              - manage.user.write.photo_delete
+                              - manage.user.read.list
+                              - manage.user.add
+                              - manage.user.write.create
+                              - manage.user.edit
+                              - manage.user.write.update
+                              - manage.user.write.soft_delete
+                              - manage.user.write.permanent_delete
+                              - manage.user.write.restore_user
+                              - manage.user.write.block_user
+                              - manage.user.write.unblock_user
+                              - manage.user.read.details
+                              - manage.user.write.verify
+                              - manage.user.read.transaction_list
+                              - manage.user.write.allocate_credits
+                              - admin.login.fake.user_profile
+                              - manage.credit_package.read.list
+                              - manage.credit_package.add.view
+                              - manage.credit_package.write.add
+                              - manage.credit_package.edit.view
+                              - manage.credit_package.write.edit
+                              - manage.credit_package.write.delete
+                              - manage.fake_users.read.generator_options
+                              - manage.fake_users.write.create
+                              - manage.fake_users.read.messenger
+                              - manage.fake_users.list
+                              - fake_user.write.send_message
+                              - user.read.fake_user_conversation
+                              - fake_user.write.accept_decline_message_request
+                              - fake_user.write.like_dislike
+                              - admin.write.delete_message
+                              - admin.user.write.delete_all_messages
+                              - media.upload_temp_media
+                              - media.gift.upload_temp_media
+                              - media.sticker.upload_temp_media
+                              - media.package.upload_temp_media
+                              - media.upload_logo
+                              - media.upload_small_logo
+                              - media.upload_favicon
+                              - manage.dashboard
+                              - addEdit.item.read.update.data
+                              - field.write.delete
+                              - manage.configuration.product_registration
+                              - installation.version.create.registration
+                              - installation.version.create.remove_registration
+                              - manage.configuration.clear_cache
+                              - manage.configuration.mobile_app
+                              - manage.configuration.read
+                              - manage.configuration.write
+                              - manage.custom_fields.write
+                              - add.new.section
+                              - manage.help.read
+                              - manage.financial_transaction.read.view_list
+                              - manage.financial_transaction.read.list
+                              - manage.financial_transaction.write.delete.all_transaction
+                              - manage.page.view
+                              - manage.page.list
+                              - manage.page.add.view
+                              - manage.page.write.add
+                              - manage.page.edit.view
+                              - manage.page.write.edit
+                              - manage.page.write.delete
+                              - manage.item.gift.view
+                              - manage.item.gift.add.view
+                              - manage.item.gift.write.add
+                              - manage.item.gift.edit.view
+                              - manage.item.gift.write.edit
+                              - manage.item.gift.write.delete
+                              - manage.item.sticker.view
+                              - manage.item.sticker.write.upload_image
+                              - manage.item.sticker.add.view
+                              - manage.item.sticker.write.add
+                              - manage.item.sticker.edit.view
+                              - manage.item.sticker.write.edit
+                              - manage.item.sticker.write.delete
+                              - manage.abuse_report.read.list
+                              - manage.abuse_report.write.moderated
+                              - abuse_report.get.count
+                              - manage.translations.languages
+                              - manage.translations.write.language_create
+                              - manage.translations.write.language_update
+                              - manage.translations.write.language_delete
+                              - manage.translations.lists
+                              - manage.translations.scan
+                              - manage.translations.update
+                              - manage.translations.export
+                              - manage.translations.import
+                              - manage.translations.auto_translate
+                              - manage.translations.auto_translate_all
+                              - user.credit_wallet.write.coingate.callback_url
+                              - stripe-webhook
+                              - razorpay-webhook
+                              - crypto-webhook
+                              - paystack-webhook
+                            items:
+                              type: string
+                          routes:
+                            type: object
+                            properties:
+                              liap.serverNotifications:
+                                type: string
+                                example: in-app-purchase/liap/notifications
+                              sanctum.csrf-cookie:
+                                type: string
+                                example: sanctum/csrf-cookie
+                              ignition.healthCheck:
+                                type: string
+                                example: _ignition/health-check
+                              ignition.executeSolution:
+                                type: string
+                                example: _ignition/execute-solution
+                              ignition.updateConfig:
+                                type: string
+                                example: _ignition/update-config
+                              __laraware.state_via_route:
+                                type: string
+                                example: 'state-via-route/{stateRouteInfo}'
+                              __laraware.redirect_via_post:
+                                type: string
+                                example: 'redirect-via-post/{redirectPostData}'
+                              __laraware.post_event_streamed_request:
+                                type: string
+                                example: post-event-streamed-request
+                              base_data:
+                                type: string
+                                example: api/base-data
+                              api.user.read.user_conversations_list:
+                                type: string
+                                example: api/messenger/get-user-conversations
+                              api.user.read.user_single_conversation:
+                                type: string
+                                example: 'api/messenger/{specificUserId}/single-conversation'
+                              api.user.read.user_messages:
+                                type: string
+                                example: 'api/messenger/{userId}/get-user-messages'
+                              api.user.read.get_stickers:
+                                type: string
+                                example: api/messenger/fetch-stickers
+                              api.user.write.caller.reject_call:
+                                type: string
+                                example: 'api/messenger/{receiverUserUid}/caller-reject-call'
+                              api.user.write.receiver.reject_call:
+                                type: string
+                                example: 'api/messenger/{callerUserUid}/receiver-reject-call'
+                              api.user.write.caller.error:
+                                type: string
+                                example: 'api/messenger/{receiverUserUid}/caller-errors'
+                              api.user.write.receiver.error:
+                                type: string
+                                example: 'api/messenger/{callerUserUid}/receiver-errors'
+                              api.user.write.receiver.call_busy:
+                                type: string
+                                example: 'api/messenger/{callerUserUid}/receiver-busy-call'
+                              api.user.read.home_page_data:
+                                type: string
+                                example: api/home
+                              api.user.read.encounter_data:
+                                type: string
+                                example: api/encounter-data
+                              api.user.read.random_users:
+                                type: string
+                                example: api/random-user
+                              api.user.find_matches.read.support_data:
+                                type: string
+                                example: api/find-matches-data
+                              api.user.read.setting:
+                                type: string
+                                example: 'api/{pageType}/get-setting-data'
+                              api.user.read.photos:
+                                type: string
+                                example: api/uploaded-photos
+                              api.user.read.wizard_profile_data:
+                                type: string
+                                example: api/profile/read-profile-details
+                              api.user.read.profile:
+                                type: string
+                                example: 'api/profile/{username}/read-profile-details'
+                              api.user.read.profile_update_data:
+                                type: string
+                                example: api/profile/prepare-profile-update
+                              api.user.credit_wallet.read.wallet_transaction_list:
+                                type: string
+                                example: api/credit-wallet/transaction-list
+                              api.user.credit_wallet.read.wallet_info:
+                                type: string
+                                example: api/credit-wallet/wallet-info-data
+                              api.user.credit_wallet.read.wallet_data:
+                                type: string
+                                example: api/credit-wallet/credit-wallet-data
+                              api.user.read.premium_plan_data:
+                                type: string
+                                example: api/premium-plan/premium-plan-data
+                              api.user.read.who_liked_me_users:
+                                type: string
+                                example: api/who-liked-me
+                              api.user.read.mutual_like_users:
+                                type: string
+                                example: api/mutual-likes
+                              api.user.read.my_liked_users:
+                                type: string
+                                example: api/my-likes
+                              api.user.read.my_disliked_users:
+                                type: string
+                                example: api/disliked
+                              api.user.read.profile_visitors_users:
+                                type: string
+                                example: api/visitors
+                              api.user.read.block_user_list:
+                                type: string
+                                example: api/blocked-users-list
+                              api.user.read.booster_data:
+                                type: string
+                                example: api/get-booster-info
+                              api.user.featured_user.read.support_data:
+                                type: string
+                                example: api/get-featured-user-data
+                              api.user.notification.read.list:
+                                type: string
+                                example: api/notifications/notification-list
+                              api.user.notification.read.data:
+                                type: string
+                                example: api/notifications/notification-data
+                              locale.change:
+                                type: string
+                                example: 'change-language/{localeID}'
+                              user.read.contact:
+                                type: string
+                                example: contact
+                              user.contact.process:
+                                type: string
+                                example: post-contact
+                              page.preview:
+                                type: string
+                                example: 'page/{pageUId}/{title}'
+                              landing_page:
+                                type: string
+                                example: /
+                              search_matches:
+                                type: string
+                                example: search-matches
+                              user.login:
+                                type: string
+                                example: user/login
+                              user.login.process:
+                                type: string
+                                example: user/login-process
+                              user.sign_up:
+                                type: string
+                                example: user/sign-up
+                              user.sign_up.process:
+                                type: string
+                                example: user/sign-up-process
+                              user.forgot_password:
+                                type: string
+                                example: user/forgot-password
+                              user.forgot_password.process:
+                                type: string
+                                example: user/forgot-password-process
+                              user.reset_password:
+                                type: string
+                                example: user/reset-password
+                              user.reset_password.process:
+                                type: string
+                                example: 'user/reset-password-process/{reminderToken}'
+                              user.account.activation:
+                                type: string
+                                example: 'user/{userUid}/account-activation'
+                              login.with.otp:
+                                type: string
+                                example: user/login-with-otp
+                              send.otp:
+                                type: string
+                                example: user/send-otp
+                              verify.otp:
+                                type: string
+                                example: user/verify-otp
+                              verify.otp.process:
+                                type: string
+                                example: user/verify-otp-process
+                              social.user.login:
+                                type: string
+                                example: 'user/social-login/request/{provider}'
+                              social.user.login.callback:
+                                type: string
+                                example: 'user/social-login/response/{provider}'
+                              site_theme.change:
+                                type: string
+                                example: 'change-theme/{themeName}'
+                              home_page:
+                                type: string
+                                example: home
+                              user.profile_view:
+                                type: string
+                                example: '@{username}'
+                              user.get_profile_data:
+                                type: string
+                                example: '{username}/get-user-profile-data'
+                              user.photos_setting:
+                                type: string
+                                example: '@{username}/photos'
+                              update.log:
+                                type: string
+                                example: update-log
+                              user.read.find_matches:
+                                type: string
+                                example: find-matches
+                              user.update_profile.wizard:
+                                type: string
+                                example: user/update-profile-wizard
+                              user.profile.wizard_completed:
+                                type: string
+                                example: user/check-profile-updated
+                              user.profile.finish_wizard:
+                                type: string
+                                example: user/finish-wizard
+                              user.logout:
+                                type: string
+                                example: user/logout
+                              user.change_password:
+                                type: string
+                                example: user/change-password
+                              user.change_password.process:
+                                type: string
+                                example: user/change-password-process
+                              user.change_email:
+                                type: string
+                                example: user/change-email
+                              user.change_email.process:
+                                type: string
+                                example: user/change-email-process
+                              user.new_email.activation:
+                                type: string
+                                example: 'user/{userUid}/{newEmail}/new-email-activation'
+                              user.new_email.read.success:
+                                type: string
+                                example: user/update-email-success
+                              user.write.like_dislike:
+                                type: string
+                                example: 'user/{toUserUid}/{like}/user-like-dislike'
+                              user.my_liked_view:
+                                type: string
+                                example: user/liked
+                              user.my_disliked_view:
+                                type: string
+                                example: user/disliked
+                              user.who_liked_me_view:
+                                type: string
+                                example: user/who-liked-me
+                              user.mutual_like_view:
+                                type: string
+                                example: user/mutual-likes
+                              user.profile_visitors_view:
+                                type: string
+                                example: user/visitors
+                              user.write.send_gift:
+                                type: string
+                                example: 'user/{sendUserUId}/send-gift'
+                              user.write.report_user:
+                                type: string
+                                example: 'user/{sendUserUId}/report-user'
+                              user.write.block_user:
+                                type: string
+                                example: user/block-user
+                              user.read.block_user_list:
+                                type: string
+                                example: user/blocked-users
+                              user.write.unblock_user:
+                                type: string
+                                example: 'user/{userUid}/unblock-user'
+                              user.write.boost_profile:
+                                type: string
+                                example: user/boost-profile
+                              user.read.booster_data:
+                                type: string
+                                example: user/get-booster-info
+                              user.write.delete_account:
+                                type: string
+                                example: user/delete-account
+                              user.read.setting:
+                                type: string
+                                example: 'user/settings/{pageType}'
+                              user.write.setting:
+                                type: string
+                                example: 'user/settings/{pageType}/process-user-setting-store'
+                              user.write.basic_setting:
+                                type: string
+                                example: user/settings/process-basic-settings
+                              user.write.update_profile_wizard:
+                                type: string
+                                example: user/settings/process-update-profile-wizard
+                              user.read.search_static_cities:
+                                type: string
+                                example: user/settings/search-static-cities
+                              user.write.store_city:
+                                type: string
+                                example: user/settings/store-city
+                              user.write.location_data:
+                                type: string
+                                example: user/settings/process-location-data
+                              user.upload_profile_image:
+                                type: string
+                                example: user/settings/upload-profile-image
+                              user.upload_cover_image:
+                                type: string
+                                example: user/settings/upload-cover-image
+                              user.write.profile_setting:
+                                type: string
+                                example: user/settings/process-profile-setting
+                              user.upload_photos:
+                                type: string
+                                example: user/settings/upload-photos
+                              user.upload_photos.write.delete:
+                                type: string
+                                example: 'user/settings/{photoUid}/delete-photos'
+                              user.read.messenger:
+                                type: string
+                                example: user/messenger
+                              user.read.all_conversation:
+                                type: string
+                                example: user/messenger/all-conversation
+                              user.read.individual_conversation:
+                                type: string
+                                example: 'user/messenger/{specificUserId}/individual-conversation'
+                              user.read.user_conversation:
+                                type: string
+                                example: 'user/messenger/{userId}/get-user-conversation'
+                              user.write.send_message:
+                                type: string
+                                example: 'user/messenger/{userId}/process-send-message'
+                              user.update.user_conversation:
+                                type: string
+                                example: 'user/messenger/{userId}/update-user-conversation'
+                              user.write.accept_decline_message_request:
+                                type: string
+                                example: 'user/messenger/{userId}/process-accept-decline-message-request'
+                              user.write.delete_message:
+                                type: string
+                                example: 'user/messenger/{chatId}/{userId}/delete-message'
+                              user.write.caller.call_initialize:
+                                type: string
+                                example: 'user/messenger/{userUId}/{type}/call-initialize'
+                              user.write.receiver.join_call:
+                                type: string
+                                example: user/messenger/join-call
+                              user.write.caller.reject_call:
+                                type: string
+                                example: 'user/messenger/{receiverUserUid}/caller-reject-call'
+                              user.write.receiver.reject_call:
+                                type: string
+                                example: 'user/messenger/{callerUserUid}/receiver-reject-call'
+                              user.write.caller.error:
+                                type: string
+                                example: 'user/messenger/{receiverUserUid}/caller-errors'
+                              user.write.receiver.error:
+                                type: string
+                                example: 'user/messenger/{callerUserUid}/receiver-errors'
+                              user.write.receiver.call_accept:
+                                type: string
+                                example: 'user/messenger/{receiverUserUid}/receiver-call-accept'
+                              user.write.receiver.call_busy:
+                                type: string
+                                example: 'user/messenger/{callerUserUid}/receiver-busy-call'
+                              user.write.delete_all_messages:
+                                type: string
+                                example: 'user/messenger/{userId}/delete-all-message'
+                              user.read.get_stickers:
+                                type: string
+                                example: user/messenger/get-stickers
+                              user.write.buy_stickers:
+                                type: string
+                                example: user/messenger/process-buy-sticker
+                              user.notification.read.view:
+                                type: string
+                                example: user/notifications
+                              user.notification.read.list:
+                                type: string
+                                example: user/notifications/notification-list
+                              user.notification.write.read_all_notification:
+                                type: string
+                                example: user/notifications/read-all-notification
+                              user.read.encounter.view:
+                                type: string
+                                example: user/encounters
+                              user.write.encounter.like_dislike:
+                                type: string
+                                example: 'user/encounters/{toUserUid}/{like}/user-encounter-like-dislike'
+                              user.write.encounter.skip_user:
+                                type: string
+                                example: 'user/encounters/{toUserUid}/skip-encounter-user'
+                              user.premium_plan.read.view:
+                                type: string
+                                example: user/premium
+                              user.premium_plan.write.buy_premium_plan:
+                                type: string
+                                example: user/premium/buy-plans
+                              user.premium_plan.read.success_view:
+                                type: string
+                                example: user/premium/success
+                              user.credit_wallet.read.view:
+                                type: string
+                                example: user/credits
+                              user.wallet.transactions.read.view:
+                                type: string
+                                example: user/credits/transactions
+                              user.credit_wallet.read.wallet_transaction_list:
+                                type: string
+                                example: user/credits/user-wallet-transaction-list
+                              user.credit_wallet.write.paypal_transaction_complete:
+                                type: string
+                                example: 'user/credits/{packageUid}/paypal-transaction-complete'
+                              paypal.order.process:
+                                type: string
+                                example: user/credits/paypal-order-submit
+                              capture.paypal.checkout:
+                                type: string
+                                example: user/credits/paypal/capture-paypal-order
+                              user.credit_wallet.write.payment_process:
+                                type: string
+                                example: user/credits/payment-process
+                              user.credit_wallet.write.stripe.callback_url:
+                                type: string
+                                example: user/credits/stripe-callback
+                              user.credit_wallet.write.stripe.cancel_url:
+                                type: string
+                                example: user/credits/stripe-cancel
+                              user.credit_wallet.write.razorpay.checkout:
+                                type: string
+                                example: user/credits/razorpay-checkout
+                              user.credit_wallet.write.coingate.checkout:
+                                type: string
+                                example: user/credits/coingate-checkout
+                              user.credit_wallet.coingate.success:
+                                type: string
+                                example: 'user/credits/coingate-success-url/{status}'
+                              crypto.payment_process:
+                                type: string
+                                example: user/credits/crypto-checkout
+                              verify.paystack.payment:
+                                type: string
+                                example: 'user/credits/paystack-verify/{reference}'
+                              callback.paystack.payment:
+                                type: string
+                                example: user/credits/paystack-callback-url
+                              manage.user.view_list:
+                                type: string
+                                example: 'admin/manage/user/{status}/list/{userType?}'
+                              manage.user.photos_list:
+                                type: string
+                                example: admin/manage/user/photos
+                              manage.user.read.photos_list:
+                                type: string
+                                example: admin/manage/user/photos-list
+                              manage.user.write.photo_delete:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/{type}/{profileOrPhotoUid}/process-delete-photo'
+                              manage.user.read.list:
+                                type: string
+                                example: 'admin/manage/user/{status}/users-list/{userType?}'
+                              manage.user.add:
+                                type: string
+                                example: admin/manage/user/add
+                              manage.user.write.create:
+                                type: string
+                                example: admin/manage/user/process-add
+                              manage.user.edit:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/edit'
+                              manage.user.write.update:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-update'
+                              manage.user.write.soft_delete:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-soft-delete'
+                              manage.user.write.permanent_delete:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-permanent-delete'
+                              manage.user.write.restore_user:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-restore-user'
+                              manage.user.write.block_user:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-block-user'
+                              manage.user.write.unblock_user:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/process-unblock-user'
+                              manage.user.read.details:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/details'
+                              manage.user.write.verify:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/verify-profile'
+                              manage.user.read.transaction_list:
+                                type: string
+                                example: 'admin/manage/user/{userUid}/manage-user-transaction-list'
+                              manage.user.write.allocate_credits:
+                                type: string
+                                example: admin/manage/user/add-user-allocate-credits
+                              admin.login.fake.user_profile:
+                                type: string
+                                example: 'admin/manage/user/process-to-login/{userId}'
+                              manage.credit_package.read.list:
+                                type: string
+                                example: admin/manage/credit-package/list
+                              manage.credit_package.add.view:
+                                type: string
+                                example: admin/manage/credit-package/add-package
+                              manage.credit_package.write.add:
+                                type: string
+                                example: admin/manage/credit-package/add-package-process
+                              manage.credit_package.edit.view:
+                                type: string
+                                example: 'admin/manage/credit-package/{packageUId}/edit-package'
+                              manage.credit_package.write.edit:
+                                type: string
+                                example: 'admin/manage/credit-package/{packageUId}/edit-package-process'
+                              manage.credit_package.write.delete:
+                                type: string
+                                example: 'admin/manage/credit-package/{packageUId}/delete-package'
+                              manage.fake_users.read.generator_options:
+                                type: string
+                                example: admin/manage/fake-user/generate
+                              manage.fake_users.write.create:
+                                type: string
+                                example: admin/manage/fake-user/generate-fake-users
+                              manage.fake_users.read.messenger:
+                                type: string
+                                example: admin/manage/fake-user/conversations
+                              manage.fake_users.list:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/fake-user-list/{fakeUserId}'
+                              fake_user.write.send_message:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{userId}/process-send-message'
+                              user.read.fake_user_conversation:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{userId}/{fake_user_id}/get-fake-user-conversation'
+                              fake_user.write.accept_decline_message_request:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{userId}/{optionalLoggedInUserId}/process-accept-decline-message-request'
+                              fake_user.write.like_dislike:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{fromUserId}/{toUserUid}/{like}/user-like-dislike'
+                              admin.write.delete_message:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{chatId}/{userId}/{optionalLoggedInUserId}/delete-message'
+                              admin.user.write.delete_all_messages:
+                                type: string
+                                example: 'admin/manage/fake-user/conversations/{userId}/{optionalLoggedInUserId}/delete-all-message'
+                              media.upload_temp_media:
+                                type: string
+                                example: admin/media/upload-temp-media
+                              media.gift.upload_temp_media:
+                                type: string
+                                example: admin/media/upload-gift-temp-media
+                              media.sticker.upload_temp_media:
+                                type: string
+                                example: admin/media/upload-sticker-temp-media
+                              media.package.upload_temp_media:
+                                type: string
+                                example: admin/media/upload-package-temp-media
+                              media.upload_logo:
+                                type: string
+                                example: admin/media/upload-logo
+                              media.upload_small_logo:
+                                type: string
+                                example: admin/media/upload-small-logo
+                              media.upload_favicon:
+                                type: string
+                                example: admin/media/upload-favicon
+                              manage.dashboard:
+                                type: string
+                                example: admin
+                              addEdit.item.read.update.data:
+                                type: string
+                                example: 'admin/configuration/get-items-info/{groupName}/{itemPos}'
+                              field.write.delete:
+                                type: string
+                                example: 'admin/configuration/process-custom-fields-delete/{groupName}/{itemPos}/{field}'
+                              manage.configuration.product_registration:
+                                type: string
+                                example: admin/configuration/licence-information
+                              installation.version.create.registration:
+                                type: string
+                                example: admin/configuration/licence-information-process
+                              installation.version.create.remove_registration:
+                                type: string
+                                example: admin/configuration/licence-information-remove-process
+                              manage.configuration.clear_cache:
+                                type: string
+                                example: admin/configuration/clear-system-cache
+                              manage.configuration.mobile_app:
+                                type: string
+                                example: admin/configuration/mobile-app
+                              manage.configuration.read:
+                                type: string
+                                example: 'admin/configuration/{pageType}'
+                              manage.configuration.write:
+                                type: string
+                                example: 'admin/configuration/{pageType}/process-configuration-store'
+                              manage.custom_fields.write:
+                                type: string
+                                example: 'admin/configuration/{pageType}/process-custom-fields-store'
+                              add.new.section:
+                                type: string
+                                example: 'admin/configuration/{pageType}/add-new-section'
+                              manage.help.read:
+                                type: string
+                                example: admin/help-references/emails
+                              manage.financial_transaction.read.view_list:
+                                type: string
+                                example: 'admin/financial-transaction/{transactionType}/list'
+                              manage.financial_transaction.read.list:
+                                type: string
+                                example: 'admin/financial-transaction/{transactionType}/transaction-list'
+                              manage.financial_transaction.write.delete.all_transaction:
+                                type: string
+                                example: admin/financial-transaction/delete-all-test-transaction
+                              manage.page.view:
+                                type: string
+                                example: admin/pages
+                              manage.page.list:
+                                type: string
+                                example: admin/pages/list
+                              manage.page.add.view:
+                                type: string
+                                example: admin/pages/add
+                              manage.page.write.add:
+                                type: string
+                                example: admin/pages/page-add-process
+                              manage.page.edit.view:
+                                type: string
+                                example: 'admin/pages/{pageUId}/edit'
+                              manage.page.write.edit:
+                                type: string
+                                example: 'admin/pages/{pageUId}/page-edit-process'
+                              manage.page.write.delete:
+                                type: string
+                                example: 'admin/pages/{pageUId}/page-delete'
+                              manage.item.gift.view:
+                                type: string
+                                example: admin/gift
+                              manage.item.gift.add.view:
+                                type: string
+                                example: admin/add-gift
+                              manage.item.gift.write.add:
+                                type: string
+                                example: admin/add-gift-process
+                              manage.item.gift.edit.view:
+                                type: string
+                                example: 'admin/{giftUId}/edit-gift'
+                              manage.item.gift.write.edit:
+                                type: string
+                                example: 'admin/{giftUId}/edit-gift-process'
+                              manage.item.gift.write.delete:
+                                type: string
+                                example: 'admin/{giftUId}/delete-gift'
+                              manage.item.sticker.view:
+                                type: string
+                                example: admin/sticker
+                              manage.item.sticker.write.upload_image:
+                                type: string
+                                example: admin/upload-sticker-image
+                              manage.item.sticker.add.view:
+                                type: string
+                                example: admin/add-sticker
+                              manage.item.sticker.write.add:
+                                type: string
+                                example: admin/add-sticker-process
+                              manage.item.sticker.edit.view:
+                                type: string
+                                example: 'admin/{stickerUId}/edit-sticker'
+                              manage.item.sticker.write.edit:
+                                type: string
+                                example: 'admin/{stickerUId}/edit-sticker-process'
+                              manage.item.sticker.write.delete:
+                                type: string
+                                example: 'admin/{stickerUId}/delete-sticker'
+                              manage.abuse_report.read.list:
+                                type: string
+                                example: 'admin/abuse-report/{status}/list'
+                              manage.abuse_report.write.moderated:
+                                type: string
+                                example: admin/abuse-report/moderate-report
+                              abuse_report.get.count:
+                                type: string
+                                example: admin/abuse-report/abuse-report-count
+                              manage.translations.languages:
+                                type: string
+                                example: admin/translations
+                              manage.translations.write.language_create:
+                                type: string
+                                example: admin/translations/process-language-store
+                              manage.translations.write.language_update:
+                                type: string
+                                example: admin/translations/process-language-update
+                              manage.translations.write.language_delete:
+                                type: string
+                                example: 'admin/translations/{languageId}/process-language-delete'
+                              manage.translations.lists:
+                                type: string
+                                example: 'admin/translations/language/{languageId}/{languageType?}'
+                              manage.translations.scan:
+                                type: string
+                                example: 'admin/translations/scan/{languageId}/{preventReload?}'
+                              manage.translations.update:
+                                type: string
+                                example: 'admin/translations/update/{languageType?}'
+                              manage.translations.export:
+                                type: string
+                                example: 'admin/translations/export/{languageId}'
+                              manage.translations.import:
+                                type: string
+                                example: 'admin/translations/import/{languageId}'
+                              manage.translations.auto_translate:
+                                type: string
+                                example: 'admin/translations/auto-translate/{serviceId}/{languageId}'
+                              manage.translations.auto_translate_all:
+                                type: string
+                                example: 'admin/translations/auto-translate-all/{serviceId}'
+                              user.credit_wallet.write.coingate.callback_url:
+                                type: string
+                                example: coingate-callback
+                              stripe-webhook:
+                                type: string
+                                example: stripe/order-payment-webhook
+                              razorpay-webhook:
+                                type: string
+                                example: razorpay/order-payment-razorpay-webhook
+                              crypto-webhook:
+                                type: string
+                                example: crypto/crypto-order-payment-webhook
+                              paystack-webhook:
+                                type: string
+                                example: paystack-webhook-order
+                          agora_app_id:
+                            type: string
+                            example: ''
+                          pusher_key:
+                            type: string
+                            example: ''
+                          pusher_cluster_key:
+                            type: string
+                            example: ap2
+                          messages:
+                            type: object
+                            properties:
+                              validation:
+                                type: object
+                                properties:
+                                  accepted:
+                                    type: string
+                                    example: 'The :attribute must be accepted.'
+                                  accepted_if:
+                                    type: string
+                                    example: 'The :attribute field must be accepted when :other is :value.'
+                                  active_url:
+                                    type: string
+                                    example: 'The :attribute is not a valid URL.'
+                                  after:
+                                    type: string
+                                    example: 'The :attribute must be a date after :date.'
+                                  after_or_equal:
+                                    type: string
+                                    example: 'The :attribute must be a date after or equal to :date.'
+                                  alpha:
+                                    type: string
+                                    example: 'The :attribute may only contain letters.'
+                                  alpha_dash:
+                                    type: string
+                                    example: 'The :attribute may only contain letters, numbers, dashes and underscores.'
+                                  alpha_num:
+                                    type: string
+                                    example: 'The :attribute may only contain letters and numbers.'
+                                  array:
+                                    type: string
+                                    example: 'The :attribute must be an array.'
+                                  ascii:
+                                    type: string
+                                    example: 'The :attribute field must only contain single-byte alphanumeric characters and symbols.'
+                                  before:
+                                    type: string
+                                    example: 'The :attribute must be a date before :date.'
+                                  before_or_equal:
+                                    type: string
+                                    example: 'The :attribute must be a date before or equal to :date.'
+                                  between:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must have between :min and :max items.' }
+                                      file: { type: string, example: 'The :attribute must be between :min and :max kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be between :min and :max.' }
+                                      string: { type: string, example: 'The :attribute must be between :min and :max characters.' }
+                                  boolean:
+                                    type: string
+                                    example: 'The :attribute field must be true or false.'
+                                  can:
+                                    type: string
+                                    example: 'The :attribute field contains an unauthorized value.'
+                                  confirmed:
+                                    type: string
+                                    example: 'The :attribute confirmation does not match.'
+                                  current_password:
+                                    type: string
+                                    example: 'The password is incorrect.'
+                                  date:
+                                    type: string
+                                    example: 'The :attribute is not a valid date.'
+                                  date_equals:
+                                    type: string
+                                    example: 'The :attribute must be a date equal to :date.'
+                                  date_format:
+                                    type: string
+                                    example: 'The :attribute does not match the format :format.'
+                                  decimal:
+                                    type: string
+                                    example: 'The :attribute field must have :decimal decimal places.'
+                                  declined:
+                                    type: string
+                                    example: 'The :attribute field must be declined.'
+                                  declined_if:
+                                    type: string
+                                    example: 'The :attribute field must be declined when :other is :value.'
+                                  different:
+                                    type: string
+                                    example: 'The :attribute and :other must be different.'
+                                  digits:
+                                    type: string
+                                    example: 'The :attribute must be :digits digits.'
+                                  digits_between:
+                                    type: string
+                                    example: 'The :attribute must be between :min and :max digits.'
+                                  dimensions:
+                                    type: string
+                                    example: 'The :attribute has invalid image dimensions.'
+                                  distinct:
+                                    type: string
+                                    example: 'The :attribute field has a duplicate value.'
+                                  doesnt_end_with:
+                                    type: string
+                                    example: 'The :attribute field must not end with one of the following: :values.'
+                                  doesnt_start_with:
+                                    type: string
+                                    example: 'The :attribute field must not start with one of the following: :values.'
+                                  email:
+                                    type: string
+                                    example: 'The :attribute must be a valid email address.'
+                                  ends_with:
+                                    type: string
+                                    example: 'The :attribute must end with one of the following: :values.'
+                                  enum:
+                                    type: string
+                                    example: 'The selected :attribute is invalid.'
+                                  exists:
+                                    type: string
+                                    example: 'The selected :attribute is invalid.'
+                                  extensions:
+                                    type: string
+                                    example: 'The :attribute field must have one of the following extensions: :values.'
+                                  file:
+                                    type: string
+                                    example: 'The :attribute must be a file.'
+                                  filled:
+                                    type: string
+                                    example: 'The :attribute field must have a value.'
+                                  gt:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must have more than :value items.' }
+                                      file: { type: string, example: 'The :attribute must be greater than :value kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be greater than :value.' }
+                                      string: { type: string, example: 'The :attribute must be greater than :value characters.' }
+                                  gte:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must have :value items or more.' }
+                                      file: { type: string, example: 'The :attribute must be greater than or equal :value kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be greater than or equal :value.' }
+                                      string: { type: string, example: 'The :attribute must be greater than or equal :value characters.' }
+                                  hex_color:
+                                    type: string
+                                    example: 'The :attribute field must be a valid hexadecimal color.'
+                                  image:
+                                    type: string
+                                    example: 'The :attribute must be an image.'
+                                  in:
+                                    type: string
+                                    example: 'The selected :attribute is invalid.'
+                                  in_array:
+                                    type: string
+                                    example: 'The :attribute field does not exist in :other.'
+                                  integer:
+                                    type: string
+                                    example: 'The :attribute must be an integer.'
+                                  ip:
+                                    type: string
+                                    example: 'The :attribute must be a valid IP address.'
+                                  ipv4:
+                                    type: string
+                                    example: 'The :attribute must be a valid IPv4 address.'
+                                  ipv6:
+                                    type: string
+                                    example: 'The :attribute must be a valid IPv6 address.'
+                                  json:
+                                    type: string
+                                    example: 'The :attribute must be a valid JSON string.'
+                                  lowercase:
+                                    type: string
+                                    example: 'The :attribute field must be lowercase.'
+                                  lt:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must have less than :value items.' }
+                                      file: { type: string, example: 'The :attribute must be less than :value kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be less than :value.' }
+                                      string: { type: string, example: 'The :attribute must be less than :value characters.' }
+                                  lte:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must not have more than :value items.' }
+                                      file: { type: string, example: 'The :attribute must be less than or equal :value kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be less than or equal :value.' }
+                                      string: { type: string, example: 'The :attribute must be less than or equal :value characters.' }
+                                  mac_address:
+                                    type: string
+                                    example: 'The :attribute field must be a valid MAC address.'
+                                  max:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute may not have more than :max items.' }
+                                      file: { type: string, example: 'The :attribute may not be greater than :max kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute may not be greater than :max.' }
+                                      string: { type: string, example: 'The :attribute may not be greater than :max characters.' }
+                                  max_digits:
+                                    type: string
+                                    example: 'The :attribute field must not have more than :max digits.'
+                                  mimes:
+                                    type: string
+                                    example: 'The :attribute must be a file of type: :values.'
+                                  mimetypes:
+                                    type: string
+                                    example: 'The :attribute must be a file of type: :values.'
+                                  min:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must have at least :min items.' }
+                                      file: { type: string, example: 'The :attribute must be at least :min kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be at least :min.' }
+                                      string: { type: string, example: 'The :attribute must be at least :min characters.' }
+                                  min_digits:
+                                    type: string
+                                    example: 'The :attribute field must have at least :min digits.'
+                                  missing:
+                                    type: string
+                                    example: 'The :attribute field must be missing.'
+                                  missing_if:
+                                    type: string
+                                    example: 'The :attribute field must be missing when :other is :value.'
+                                  missing_unless:
+                                    type: string
+                                    example: 'The :attribute field must be missing unless :other is :value.'
+                                  missing_with:
+                                    type: string
+                                    example: 'The :attribute field must be missing when :values is present.'
+                                  missing_with_all:
+                                    type: string
+                                    example: 'The :attribute field must be missing when :values are present.'
+                                  multiple_of:
+                                    type: string
+                                    example: 'The :attribute field must be a multiple of :value.'
+                                  not_in:
+                                    type: string
+                                    example: 'The selected :attribute is invalid.'
+                                  not_regex:
+                                    type: string
+                                    example: 'The :attribute format is invalid.'
+                                  numeric:
+                                    type: string
+                                    example: 'The :attribute must be a number.'
+                                  password:
+                                    type: string
+                                    example: 'The password is incorrect.'
+                                  present:
+                                    type: string
+                                    example: 'The :attribute field must be present.'
+                                  present_if:
+                                    type: string
+                                    example: 'The :attribute field must be present when :other is :value.'
+                                  present_unless:
+                                    type: string
+                                    example: 'The :attribute field must be present unless :other is :value.'
+                                  present_with:
+                                    type: string
+                                    example: 'The :attribute field must be present when :values is present.'
+                                  present_with_all:
+                                    type: string
+                                    example: 'The :attribute field must be present when :values are present.'
+                                  prohibited:
+                                    type: string
+                                    example: 'The :attribute field is prohibited.'
+                                  prohibited_if:
+                                    type: string
+                                    example: 'The :attribute field is prohibited when :other is :value.'
+                                  prohibited_unless:
+                                    type: string
+                                    example: 'The :attribute field is prohibited unless :other is in :values.'
+                                  prohibits:
+                                    type: string
+                                    example: 'The :attribute field prohibits :other from being present.'
+                                  regex:
+                                    type: string
+                                    example: 'The :attribute format is invalid.'
+                                  required:
+                                    type: string
+                                    example: 'The :attribute field is required.'
+                                  required_array_keys:
+                                    type: string
+                                    example: 'The :attribute field must contain entries for: :values.'
+                                  required_if:
+                                    type: string
+                                    example: 'The :attribute field is required when :other is :value.'
+                                  required_if_accepted:
+                                    type: string
+                                    example: 'The :attribute field is required when :other is accepted.'
+                                  required_unless:
+                                    type: string
+                                    example: 'The :attribute field is required unless :other is in :values.'
+                                  required_with:
+                                    type: string
+                                    example: 'The :attribute field is required when :values is present.'
+                                  required_with_all:
+                                    type: string
+                                    example: 'The :attribute field is required when :values are present.'
+                                  required_without:
+                                    type: string
+                                    example: 'The :attribute field is required when :values is not present.'
+                                  required_without_all:
+                                    type: string
+                                    example: 'The :attribute field is required when none of :values are present.'
+                                  same:
+                                    type: string
+                                    example: 'The :attribute and :other must match.'
+                                  size:
+                                    type: object
+                                    properties:
+                                      array: { type: string, example: 'The :attribute must contain :size items.' }
+                                      file: { type: string, example: 'The :attribute must be :size kilobytes.' }
+                                      numeric: { type: string, example: 'The :attribute must be :size.' }
+                                      string: { type: string, example: 'The :attribute must be :size characters.' }
+                                  starts_with:
+                                    type: string
+                                    example: 'The :attribute must start with one of the following: :values.'
+                                  string:
+                                    type: string
+                                    example: 'The :attribute must be a string.'
+                                  timezone:
+                                    type: string
+                                    example: 'The :attribute must be a valid zone.'
+                                  unique:
+                                    type: string
+                                    example: 'The :attribute has already been taken.'
+                                  uploaded:
+                                    type: string
+                                    example: 'The :attribute failed to upload.'
+                                  uppercase:
+                                    type: string
+                                    example: 'The :attribute field must be uppercase.'
+                                  url:
+                                    type: string
+                                    example: 'The :attribute format is invalid.'
+                                  ulid:
+                                    type: string
+                                    example: 'The :attribute field must be a valid ULID.'
+                                  uuid:
+                                    type: string
+                                    example: 'The :attribute must be a valid UUID.'
+                                  custom:
+                                    type: object
+                                    properties:
+                                      attribute-name: { type: object, properties: { rule-name: { type: string, example: custom-message } } }
+                                      confirmation_code: { type: object, properties: { captcha: { type: string, example: 'The confirmation code is invalid.' } } }
+                                      email: { type: object, properties: { unique_email: { type: string, example: 'The :attribute has already been taken.' }, unique_in_email_change_request: { type: string, example: 'The :attribute has already been taken for new email request.' }, unique_client_member_email: { type: string, example: 'The :attribute has already been taken.' } } }
+                                      new_email: { type: object, properties: { unique_email: { type: string, example: 'The :attribute has already been taken.' } } }
+                                      custom_domain: { type: object, properties: { domain: { type: string, example: 'The :attribute format is invalid.' } } }
+                                      comment: { type: object, properties: { verify_comment: { type: string, example: 'The :attribute field is required.' } } }
+                                  attributes:
+                                    type: array
+                                    example: []
+                                  reactions:
+                                    type: object
+                                    properties:
+                                      14: { type: array, example: ['Ooops... No changes made!!', 'Ooops... Nothing to process!!', "It seems you didn't modified anything!!"], items: { type: string } }
+                                      15: { type: array, example: ['Please wait files uploading in progress ...', 'Please wait a while its in progress ...'], items: { type: string } }
+                                      16: { type: string, example: 'Files uploaded successfully' }
+                                      4: { type: array, example: ['Oh..no...Something left invalid!!', 'Ooops... Validation Errrrors...!!', 'Oh... it looks invalid...!!', 'Something went wrong with validation!!'], items: { type: string } }
+                                      1: { type: string, example: 'Request processed successfully' }
+                                      6: { type: string, example: 'Invalid request access' }
+                                      19: { type: string, example: 'Oooops ... something went wrong on server. Try after some time!!' }
+                                      20: { type: object, properties: { 0: { type: string, example: 'Invalid request token. Please reload page and try again!!' }, 1: { type: string, example: 'Request token Expired. Please reload page and try again!!' }, attribute-name: { type: object, properties: { rule-name: { type: string, example: custom-message } } } } }
+                                      attributes: { type: array, example: [] }
+                              js_string:
+                                type: string
+                                example: js-string
+                      appConfig:
+                        type: object
+                        properties:
+                          debug:
+                            type: boolean
+                            example: false
+                          appBaseURL:
+                            type: string
+                            example: 'https://app.wesal.plus/'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+                      message:
+                        type: string
+                        example: ''
+      tags:
+        - Endpoints
+      security: []
+  /api/messenger/get-user-conversations:
+    get:
+      summary: 'Get User Conversation List'
+      operationId: getUserConversationList
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  '/api/messenger/{specificUserId}/single-conversation':
+    get:
+      summary: 'Get Conversation List'
+      operationId: getConversationList
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: specificUserId
+        description: ''
+        example: sed
+        required: true
+        schema:
+          type: string
+  '/api/messenger/{userId}/get-user-messages':
+    get:
+      summary: 'Get User Conversation'
+      operationId: getUserConversation
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: qui
+        required: true
+        schema:
+          type: string
+  /api/messenger/fetch-stickers:
+    get:
+      summary: 'Get Stickers'
+      operationId: getStickers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  '/api/messenger/{receiverUserUid}/caller-reject-call':
+    get:
+      summary: 'Prepare user caller reject call'
+      operationId: prepareUserCallerRejectCall
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: receiverUserUid
+        description: ''
+        example: enim
+        required: true
+        schema:
+          type: string
+  '/api/messenger/{callerUserUid}/receiver-reject-call':
+    get:
+      summary: 'Prepare user receiver reject call'
+      operationId: prepareUserReceiverRejectCall
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: callerUserUid
+        description: ''
+        example: voluptatem
+        required: true
+        schema:
+          type: string
+  '/api/messenger/{receiverUserUid}/caller-errors':
+    get:
+      summary: 'Prepare Caller Calling Errors Request'
+      operationId: prepareCallerCallingErrorsRequest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: receiverUserUid
+        description: ''
+        example: facilis
+        required: true
+        schema:
+          type: string
+  '/api/messenger/{callerUserUid}/receiver-errors':
+    get:
+      summary: 'Prepare Receiver Calling Errors Request'
+      operationId: prepareReceiverCallingErrorsRequest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: callerUserUid
+        description: ''
+        example: ut
+        required: true
+        schema:
+          type: string
+  '/api/messenger/{callerUserUid}/receiver-busy-call':
+    get:
+      summary: 'Prepare Receiver Calling Busy Errors Request'
+      operationId: prepareReceiverCallingBusyErrorsRequest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: callerUserUid
+        description: ''
+        example: corporis
+        required: true
+        schema:
+          type: string
+  /api/home:
+    get:
+      summary: "View Home Page\n----------------------------------------------------------------"
+      operationId: viewHomePage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/encounter-data:
+    get:
+      summary: "View Home Page\n----------------------------------------------------------------"
+      operationId: viewHomePage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/random-user:
+    get:
+      summary: "View Home Page\n----------------------------------------------------------------"
+      operationId: viewHomePage
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/find-matches-data:
+    get:
+      summary: 'Get Filter data and show filter view'
+      operationId: getFilterDataAndShowFilterView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  '/api/{pageType}/get-setting-data':
+    get:
+      summary: 'Show user setting view.'
+      operationId: showUserSettingView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: pageType
+        description: ''
+        example: ipsam
+        required: true
+        schema:
+          type: string
+  /api/uploaded-photos:
+    get:
+      summary: 'prepare user photos.'
+      operationId: prepareUserPhotos
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/profile/read-profile-details:
+    get:
+      summary: 'process Boost Profile.'
+      operationId: processBoostProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  '/api/profile/{username}/read-profile-details':
+    get:
+      summary: 'prepare user profile'
+      operationId: prepareUserProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: username
+        description: ''
+        example: aperiam
+        required: true
+        schema:
+          type: string
+  /api/profile/prepare-profile-update:
+    get:
+      summary: 'Prepare user profile edit options'
+      operationId: prepareUserProfileEditOptions
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/credit-wallet/transaction-list:
+    get:
+      summary: 'Show user Transaction List.'
+      operationId: showUserTransactionList
+      description: '-----------------------------------------------------------------------'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/credit-wallet/wallet-info-data:
+    get:
+      summary: 'Get user wallet info like credit balance'
+      operationId: getUserWalletInfoLikeCreditBalance
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/credit-wallet/credit-wallet-data:
+    get:
+      summary: 'Handle complete transaction request.'
+      operationId: handleCompleteTransactionRequest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/premium-plan/premium-plan-data:
+    get:
+      summary: 'User Premium Plan View.'
+      operationId: userPremiumPlanView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/who-liked-me:
+    get:
+      summary: 'Get User my Disliked view.'
+      operationId: getUserMyDislikedView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/mutual-likes:
+    get:
+      summary: 'Get mutual like view.'
+      operationId: getMutualLikeView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/my-likes:
+    get:
+      summary: 'Get User my like view.'
+      operationId: getUserMyLikeView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/disliked:
+    get:
+      summary: 'Get User my Disliked view.'
+      operationId: getUserMyDislikedView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/visitors:
+    get:
+      summary: 'Get profile visitors view.'
+      operationId: getProfileVisitorsView
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/blocked-users-list:
+    get:
+      summary: 'Get block user view and user list.'
+      operationId: getBlockUserViewAndUserList
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/get-booster-info:
+    get:
+      summary: 'get booster price and period'
+      operationId: getBoosterPriceAndPeriod
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/get-featured-user-data:
+    get:
+      summary: 'prepare featured users.'
+      operationId: prepareFeaturedUsers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/notifications/notification-list:
+    get:
+      summary: 'Get Notification DataTable data.'
+      operationId: getNotificationDataTableData
+      description: '-----------------------------------------------------------------------'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+  /api/notifications/notification-data:
+    get:
+      summary: 'Handle read all notification request.'
+      operationId: handleReadAllNotificationRequest
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  response_token: 0
+                  reaction: 2
+                  incident: null
+                  client_models: []
+                  data:
+                    message: 'The payload is invalid.'
+                    auth_info:
+                      authorized: false
+                      reaction_code: 9
+                properties:
+                  response_token:
+                    type: integer
+                    example: 0
+                  reaction:
+                    type: integer
+                    example: 2
+                  incident:
+                    type: string
+                    example: null
+                  client_models:
+                    type: array
+                    example: []
+                  data:
+                    type: object
+                    properties:
+                      message:
+                        type: string
+                        example: 'The payload is invalid.'
+                      auth_info:
+                        type: object
+                        properties:
+                          authorized:
+                            type: boolean
+                            example: false
+                          reaction_code:
+                            type: integer
+                            example: 9
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
