@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 | Lw-Dating (Mobile App) Api Routes
 |--------------------------------------------------------------------------
 */
+use Illuminate\Http\Request;
+
 
 Route::group([
     'namespace' => '\App\Yantrana\Components',
@@ -25,31 +27,15 @@ Route::group([
     /*
     User Components Public Section Related Routes
     ----------------------------------------------------------------------- */
+
+
     Route::group(['middleware' => 'guest'], function () {
         Route::group([
             'namespace' => 'User\ApiControllers',
             'prefix' => 'user',
         ], function () {
-            /**
-             * User Login
-             *
-             * This endpoint allows users to log in using email or username.
-             *
-             * @queryParam  email_or_username string required The email or username. Example: firstadmin@domain.com
-             * @queryParam  password string required The user password. Example: firstadmin123
-             *
-             * @response 200 {
-             *   "token": "eyJ0eXAiOiJKV1QiLCJh...",
-             *   "user": {
-             *     "id": 1,
-             *     "email": "john_doe"
-             *   }
-             * }
-             */           
-             Route::post('/login-process', [
-                'as' => 'api.user.login.process',
-                'uses' => 'ApiUserController@loginProcess',
-            ]);
+
+            Route::post('/login-process', action: [App\Yantrana\Components\User\ApiControllers\ApiUserController::class, 'loginProcess']);           
 
             // logout
             Route::post('/logout', [

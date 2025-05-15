@@ -46,10 +46,11 @@ class ApiUserController extends BaseController
      * @param object UserLoginRequest $request
      * @return json object
      *---------------------------------------------------------------- */
-    public function loginProcess(Request $request)
+    public function loginProcess(UserLoginRequest $request)
     {
-    dd($request->all()); // Should dump all input
-       
+        $processReaction = $this->userEngine->processLogin($request->all());
+
+        return $this->processResponse($processReaction, [], [], true);
     }
 
     /**

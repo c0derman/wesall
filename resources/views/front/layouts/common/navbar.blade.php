@@ -20,8 +20,7 @@
                 <li><a href="#faq">الأسئلة الشائعة</a></li>
                  <li><a href="{{ url('/about-us') }}">من نحن  </a></li>
                  <li><a href="{{ url('/search') }}"> البحث  </a></li>
-                 <li><a href="{{ url('/contact-us') }}"> تواصل معنا  </a></li>
-
+                 <li><a href="{{ url('/contact') }}"> تواصل معنا  </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="{{ url('/signup') }}" class=" navbar-btn">سجل الآن</a></li>
