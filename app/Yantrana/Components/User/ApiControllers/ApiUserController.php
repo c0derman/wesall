@@ -183,7 +183,6 @@ class ApiUserController extends BaseController
     public function processSignUp(UserSignUpRequest $request)
     {
         $processReaction = $this->userEngine->userSignUpProcess($request->all());
-
         return $this->processResponse($processReaction, [], [], true);
     }
 

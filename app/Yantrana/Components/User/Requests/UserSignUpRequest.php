@@ -1,16 +1,16 @@
 <?php
+
 /**
-* UserSignUpRequest.php - Request file
-*
-* This file is part of the User component.
-*-----------------------------------------------------------------------------*/
+ * UserSignUpRequest.php - Request file
+ *
+ * This file is part of the User component.
+ *-----------------------------------------------------------------------------*/
 
 namespace App\Yantrana\Components\User\Requests;
 
 use App\Yantrana\Base\BaseRequest;
 use Illuminate\Validation\Rule;
 use App\Yantrana\Components\User\Models\User as UserModel;
-
 
 class UserSignUpRequest extends BaseRequest
 {
@@ -20,7 +20,7 @@ class UserSignUpRequest extends BaseRequest
     protected $securedForm = true;
 
     /**
-     * Unsecured/Un encrypted form fields.
+     * Unsecured/Unencrypted form fields.
      *------------------------------------------------------------------------ */
     protected $unsecuredFields = ['first_name', 'last_name'];
 
@@ -28,7 +28,7 @@ class UserSignUpRequest extends BaseRequest
      * Determine if the user is authorized to make this request.
      *
      * @return bool
-     *-----------------------------------------------------------------------*/
+     *------------------------------------------------------------------------ */
     public function authorize()
     {
         return true;
@@ -37,14 +37,20 @@ class UserSignUpRequest extends BaseRequest
     /**
      * Get the validation rules that apply to the user register request.
      *
-     * @return bool
-     *-----------------------------------------------------------------------*/
+     * @return array
+     *------------------------------------------------------------------------ */
     public function rules()
-    { $inputData = $this->all();
+    {
+        $inputData = $this->all();
 
-        $mobileData = '0'.$inputData['country_code'].'-'.$inputData['mobile_number'];
+        $countryCode = $inputData['country_code'] ?? null;
+        $mobileNumber = $inputData['mobile_number'] ?? null;
 
-        return  [
+        $mobileData = ($countryCode && $mobileNumber)
+            ? '0' . $countryCode . '-' . $mobileNumber
+            : null;
+
+        return [
             'first_name' => 'required|min:3|max:45',
             'last_name' => 'required|min:3|max:45',
             'username' => 'required|min:5|max:45|unique:users,username',
@@ -53,7 +59,7 @@ class UserSignUpRequest extends BaseRequest
                 'min:8',
                 'max:15',
                 function ($attribute, $value, $fail) use ($mobileData) {
-                    if (UserModel::where('mobile_number', $mobileData)->exists()) {
+                    if (!empty($mobileData) && UserModel::where('mobile_number', $mobileData)->exists()) {
                         $fail('This mobile number has already been taken.');
                     }
                 }
@@ -71,10 +77,10 @@ class UserSignUpRequest extends BaseRequest
     }
 
     /**
-     * Get the validation rules that apply to the user register request.
+     * Get the custom messages for validation errors.
      *
-     * @return bool
-     *-----------------------------------------------------------------------*/
+     * @return array
+     *------------------------------------------------------------------------ */
     public function messages()
     {
         $ageRestriction = configItem('age_restriction');
@@ -85,6 +91,7 @@ class UserSignUpRequest extends BaseRequest
                 '__max__' => $ageRestriction['maximum'],
             ]),
             'accepted_terms.required' => __tr('Please accept all terms and conditions.'),
+            // Uncomment if you want regex-based phone format checking
             // 'mobile_number.regex' => __tr('The phone number must be in the format of 0XX-XXXXXXXXXX'),
         ];
     }
