@@ -8,8 +8,9 @@
 namespace App\Yantrana\Components\User\Requests;
 
 use App\Yantrana\Base\BaseRequest;
-
-class UserUpdatePasswordRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+class UserUpdatePasswordRequest extends FormRequest
 {
 
     /**

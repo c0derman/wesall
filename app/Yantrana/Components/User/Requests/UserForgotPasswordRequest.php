@@ -10,7 +10,10 @@ namespace App\Yantrana\Components\User\Requests;
 
 use App\Yantrana\Base\BaseRequest;
 
-class UserForgotPasswordRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class UserForgotPasswordRequest extends FormRequest
 {
     /**
      * Authorization for request.
@@ -29,7 +32,7 @@ class UserForgotPasswordRequest extends BaseRequest
      *-----------------------------------------------------------------------*/
     public function rules()
     {
-        if(getStoreSettings('allow_recaptcha')) {
+        if (getStoreSettings('allow_recaptcha')) {
             request()->validate(['g-recaptcha-response' => 'required'], [
                 'g-recaptcha-response' => __tr('The recaptcha field is required.')
             ]);

@@ -8,8 +8,9 @@
 namespace App\Yantrana\Components\User\Requests;
 
 use App\Yantrana\Base\BaseRequest;
-
-class UserContactRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+class UserContactRequest extends FormRequest
 {
     /**
      * Unsecured/Un encrypted form fields.

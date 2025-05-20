@@ -8,9 +8,9 @@
 
 namespace App\Yantrana\Components\User\Requests;
 
-use App\Yantrana\Base\BaseRequest;
-
-class PaymentProcessRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+class PaymentProcessRequest extends FormRequest
 {
     /**
      * Authorization for request.

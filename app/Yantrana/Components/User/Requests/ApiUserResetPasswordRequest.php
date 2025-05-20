@@ -7,9 +7,9 @@
 
 namespace App\Yantrana\Components\User\Requests;
 
-use App\Yantrana\Base\BaseRequest;
-
-class ApiUserResetPasswordRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+class ApiUserResetPasswordRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

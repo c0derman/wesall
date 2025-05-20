@@ -8,11 +8,10 @@
 
 namespace App\Yantrana\Components\User\Requests;
 
-use App\Yantrana\Base\BaseRequest;
-use Illuminate\Validation\Rule;
 use App\Yantrana\Components\User\Models\User as UserModel;
-
-class UserSignUpRequest extends BaseRequest
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+class UserSignUpRequest extends FormRequest
 {
     /**
      * Secure form.

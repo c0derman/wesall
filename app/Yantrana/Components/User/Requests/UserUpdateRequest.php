@@ -11,8 +11,9 @@ use App\Yantrana\Base\BaseRequest;
 use Illuminate\Validation\Rule;
 use App\Yantrana\Components\User\Models\User as UserModel;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Foundation\Http\FormRequest;
 
-class UserUpdateRequest extends BaseRequest
+class UserUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
